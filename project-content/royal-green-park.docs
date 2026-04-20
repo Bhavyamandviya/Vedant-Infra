@@ -1,0 +1,50 @@
+{
+  "slug": "royal-green-park",
+  "folder": "park_royal",
+  "name": "Royal Green Park",
+  "tagline": "Recently Completed Residences",
+  "location": "Kalali, Vadodara",
+  "rera": "—",
+  "architect": "Ruchir Sheth",
+  "type": "Residences",
+  "status": "latest",
+  "hero": "/uploads/park_royal/park_bg.png",
+  "thumbnail": "/uploads/park_royal/main2.jpg",
+  "summary": "A landmark completed community by Vedant Infrastructure — peaceful residences framed by mature landscaping and a well-resolved amenity plan.",
+  "description": "Royal Green Park is one of Vedant Infra's established communities, now fully occupied. The address is remembered for its mature landscaping, considered villa typologies and the close-knit neighbourhood it has become.",
+  "brochure": "/uploads/park_royal/MAIN1.jpg",
+  "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
+  "overview": {
+    "topView": "/uploads/park_royal/top-view-with-number.jpg",
+    "elevation": "/uploads/park_royal/main2.jpg",
+    "layouts": [
+      { "src": "/uploads/park_royal/plan/layout.png", "label": "Site Layout" }
+    ]
+  },
+  "projectAmenities": [
+    { "icon": "/amenities_icons/entrancegate.png", "label": "Grand Entrance" },
+    { "icon": "/amenities_icons/security.png", "label": "24x7 Security" },
+    { "icon": "/amenities_icons/garden.png", "label": "Landscaped Gardens" },
+    { "icon": "/amenities_icons/road.png", "label": "Internal Roads" },
+    { "icon": "/amenities_icons/street.png", "label": "Street Lighting" },
+    { "icon": "/amenities_icons/child.png", "label": "Children's Play Area" }
+  ],
+  "villaAmenities": [
+    { "icon": "/amenities_icons/bedroom.png", "label": "Spacious Bedrooms" },
+    { "icon": "/amenities_icons/kitchen.png", "label": "Modern Kitchen" },
+    { "icon": "/amenities_icons/garden.png", "label": "Private Garden" },
+    { "icon": "/amenities_icons/terrace.png", "label": "Open Terrace" }
+  ],
+  "gallery": [
+    "/uploads/park_royal/park_bg.png",
+    "/uploads/park_royal/MAIN1.jpg",
+    "/uploads/park_royal/front.jpg",
+    "/uploads/park_royal/entrance.jpg"
+  ],
+  "faqs": [
+    { "q": "Is this project available for purchase?", "a": "Royal Green Park is a completed and occupied community. Resale opportunities may be available — please contact us for current listings." },
+    { "q": "Can I visit the site?", "a": "Yes. Please book an appointment and our relationship team will arrange a walk-through of our completed communities." },
+    { "q": "Notes", "a": "This is a completed project. Details shown here are for reference and legacy documentation." }
+  ],
+  "mapEmbed": "https://www.google.com/maps?q=Kalali,Vadodara&output=embed"
+}

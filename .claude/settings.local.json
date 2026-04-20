@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(npm --version)",
+      "Bash(cp -r park_royal public/uploads/)",
+      "Bash(cp -r royal_crest public/uploads/)",
+      "Bash(cp -r royal_heritage_villa public/uploads/)",
+      "Bash(cp -r royal_mansions public/uploads/)",
+      "Bash(cp -r amenities_icons public/)",
+      "Bash(npm install *)",
+      "Bash(npx next *)",
+      "Bash(cmd //c \"rmdir /s /q .next\")",
+      "Bash(cmd //c \"taskkill /F /IM node.exe /T\")"
+    ]
+  }
+}

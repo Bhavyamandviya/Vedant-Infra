@@ -1,0 +1,74 @@
+{
+  "slug": "park-royal",
+  "folder": "park_royal",
+  "name": "Park Royal",
+  "tagline": "4BHK + 2 Utility Rooms Luxury Villa",
+  "location": "Kalali, Vadodara",
+  "rera": "PR/GJ/VADODARA/VADODARA/Villas/RAA08787/19-07-2021",
+  "architect": "Ruchir Sheth",
+  "type": "Villa",
+  "status": "latest",
+  "hero": "/uploads/park_royal/MAIN1.jpg",
+  "thumbnail": "/uploads/park_royal/front.jpg",
+  "summary": "Park Royal is a prestigious residential community offering 4BHK villas with exceptional architectural design and world-class amenities. Each villa is thoughtfully planned to provide maximum comfort and spaciousness with ample green spaces throughout the community.",
+  "description": "Set in the heart of Kalali, Park Royal reflects the quiet language of modern luxury. Meticulously crafted residences, landscaped avenues and a calm, considered aesthetic combine to create a home that feels both private and expansive. The project emphasizes privacy, spaciousness and an enduring community lifestyle.",
+  "brochure": "/uploads/park_royal/MAIN1.jpg",
+  "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
+  "overview": {
+    "topView": "/uploads/park_royal/top-view-with-number.jpg",
+    "elevation": "/uploads/park_royal/front.jpg",
+    "layouts": [
+      { "src": "/uploads/park_royal/plan/layout.png", "label": "Master Layout" },
+      { "src": "/uploads/park_royal/plan/1.png", "label": "Plot 1" },
+      { "src": "/uploads/park_royal/plan/2_17.png", "label": "Plot 2 & 17" },
+      { "src": "/uploads/park_royal/plan/3_4_15_16.png", "label": "Plot 3, 4, 15 & 16" },
+      { "src": "/uploads/park_royal/plan/5_6_13_14.png", "label": "Plot 5, 6, 13 & 14" },
+      { "src": "/uploads/park_royal/plan/7_8_11_12.png", "label": "Plot 7, 8, 11 & 12" },
+      { "src": "/uploads/park_royal/plan/9.png", "label": "Plot 9" },
+      { "src": "/uploads/park_royal/plan/10.png", "label": "Plot 10" },
+      { "src": "/uploads/park_royal/plan/18.png", "label": "Plot 18" }
+    ]
+  },
+  "projectAmenities": [
+    { "icon": "/amenities_icons/entrancegate.png", "label": "Grand Entrance" },
+    { "icon": "/amenities_icons/security.png", "label": "24x7 Security" },
+    { "icon": "/amenities_icons/cctv.png", "label": "CCTV Common Area" },
+    { "icon": "/amenities_icons/road.png", "label": "RCC Roads" },
+    { "icon": "/amenities_icons/street.png", "label": "Decorative Street Lighting" },
+    { "icon": "/amenities_icons/garden.png", "label": "Lush Green Area" },
+    { "icon": "/amenities_icons/aqua.png", "label": "Aqua Water Purifier" },
+    { "icon": "/amenities_icons/gym.png", "label": "A/C Gymnasium" },
+    { "icon": "/amenities_icons/child.png", "label": "Children's Play Area" },
+    { "icon": "/amenities_icons/games.png", "label": "Game Room" },
+    { "icon": "/amenities_icons/AMPHITHEATER.png", "label": "Amphitheater" },
+    { "icon": "/amenities_icons/phone.png", "label": "Video Door Phone" }
+  ],
+  "villaAmenities": [
+    { "icon": "/amenities_icons/bedroom.png", "label": "4 Bedrooms" },
+    { "icon": "/amenities_icons/bathroom.png", "label": "4 Bathrooms" },
+    { "icon": "/amenities_icons/kitchen.png", "label": "Fully Equipped Kitchen" },
+    { "icon": "/amenities_icons/gazebo.png", "label": "Gazebo Open Terrace" },
+    { "icon": "/amenities_icons/garden.png", "label": "Private Garden" },
+    { "icon": "/amenities_icons/terrace.png", "label": "Open Terrace" },
+    { "icon": "/amenities_icons/shelf.png", "label": "Store Room" },
+    { "icon": "/amenities_icons/structure.png", "label": "Earthquake Resistant Structure" }
+  ],
+  "gallery": [
+    "/uploads/park_royal/MAIN1.jpg",
+    "/uploads/park_royal/main2.jpg",
+    "/uploads/park_royal/entrance.jpg",
+    "/uploads/park_royal/front.jpg",
+    "/uploads/park_royal/club.jpg",
+    "/uploads/park_royal/swimming.jpg",
+    "/uploads/park_royal/slider_1.jpg",
+    "/uploads/park_royal/slider_2.jpg"
+  ],
+  "faqs": [
+    { "q": "What is the villa configuration?", "a": "Park Royal offers 4BHK + 2 Utility Rooms luxury villas with private gardens and gazebo terraces." },
+    { "q": "What is the RERA registration number?", "a": "PR/GJ/VADODARA/VADODARA/Villas/RAA08787/19-07-2021" },
+    { "q": "Are payment plans flexible?", "a": "Yes. Flexible construction-linked and milestone-based payment plans are available. Our relationship team will share a detailed schedule on request." },
+    { "q": "What payment modes are accepted?", "a": "Bank transfer (NEFT / RTGS / IMPS), cheque and approved home-loan disbursements from leading banks and NBFCs. Cash is not accepted." },
+    { "q": "Notes", "a": "Prices, specifications and plans are indicative and subject to change without notice. All images are artistic impressions." }
+  ],
+  "mapEmbed": "https://www.google.com/maps?q=Kalali,Vadodara&output=embed"
+}

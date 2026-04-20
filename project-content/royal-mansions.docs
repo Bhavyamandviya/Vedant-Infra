@@ -1,0 +1,77 @@
+{
+  "slug": "royal-mansions",
+  "folder": "royal_mansions",
+  "name": "Royal Mansions",
+  "tagline": "5BHK Ultra-Luxury Villa",
+  "location": "Kalali, Vadodara",
+  "rera": "PR/GJ/VADODARA/VADODARA/Villas/RN301AA10201/270223",
+  "architect": "Ruchir Sheth",
+  "type": "Villa",
+  "status": "latest",
+  "hero": "/uploads/royal_mansions/banner.png",
+  "thumbnail": "/uploads/royal_mansions/slider_1.png",
+  "summary": "Royal Mansions represents the pinnacle of luxury living in Vadodara — ultra-luxury villas designed for those who demand the very best.",
+  "description": "Every element has been meticulously crafted to provide an unparalleled living experience combined with world-class amenities and architectural excellence. A sky sanctuary, a two-building club house and a suite of wellness spaces complete the address.",
+  "brochure": "/uploads/royal_mansions/banner.png",
+  "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
+  "overview": {
+    "topView": "/uploads/royal_mansions/top-view.jpg",
+    "elevation": "/uploads/royal_mansions/slider_2.png",
+    "layouts": [
+      { "src": "/uploads/royal_mansions/plan/layout.png", "label": "Master Layout" },
+      { "src": "/uploads/royal_mansions/plan/01.png", "label": "Plot 01" },
+      { "src": "/uploads/royal_mansions/plan/02.png", "label": "Plot 02" },
+      { "src": "/uploads/royal_mansions/plan/03.png", "label": "Plot 03" },
+      { "src": "/uploads/royal_mansions/plan/04.png", "label": "Plot 04" },
+      { "src": "/uploads/royal_mansions/plan/05.png", "label": "Plot 05" },
+      { "src": "/uploads/royal_mansions/plan/06.png", "label": "Plot 06" },
+      { "src": "/uploads/royal_mansions/plan/07.png", "label": "Plot 07" }
+    ]
+  },
+  "projectAmenities": [
+    { "icon": "/amenities_icons/entrancegate.png", "label": "Grand Entrance" },
+    { "icon": "/amenities_icons/water.png", "label": "Swimming Pool" },
+    { "icon": "/amenities_icons/terrace.png", "label": "Sky Sanctuary" },
+    { "icon": "/amenities_icons/AMPHITHEATER.png", "label": "Amphitheater" },
+    { "icon": "/amenities_icons/gym.png", "label": "A/C Gymnasium" },
+    { "icon": "/amenities_icons/yoga.png", "label": "Yoga Studio" },
+    { "icon": "/amenities_icons/seating.png", "label": "Home Theater" },
+    { "icon": "/amenities_icons/library.png", "label": "Library" },
+    { "icon": "/amenities_icons/multi-purpose-hall.png", "label": "Multipurpose Hall" },
+    { "icon": "/amenities_icons/child.png", "label": "Children's Play Area" },
+    { "icon": "/amenities_icons/games.png", "label": "Game Room" },
+    { "icon": "/amenities_icons/home.png", "label": "Cafe" },
+    { "icon": "/amenities_icons/security.png", "label": "24x7 Security" },
+    { "icon": "/amenities_icons/cctv.png", "label": "CCTV Surveillance" },
+    { "icon": "/amenities_icons/road.png", "label": "RCC Roads" },
+    { "icon": "/amenities_icons/aqua.png", "label": "Aqua Water Purifier" }
+  ],
+  "villaAmenities": [
+    { "icon": "/amenities_icons/bedroom.png", "label": "5 Bedrooms" },
+    { "icon": "/amenities_icons/bathroom.png", "label": "Ensuite Bathrooms" },
+    { "icon": "/amenities_icons/kitchen.png", "label": "Designer Kitchen" },
+    { "icon": "/amenities_icons/garden.png", "label": "Private Garden" },
+    { "icon": "/amenities_icons/terrace.png", "label": "Terrace" },
+    { "icon": "/amenities_icons/gazebo.png", "label": "Gazebo" },
+    { "icon": "/amenities_icons/shelf.png", "label": "Utility & Store" },
+    { "icon": "/amenities_icons/flooring.png", "label": "Italian Flooring" }
+  ],
+  "gallery": [
+    "/uploads/royal_mansions/banner.png",
+    "/uploads/royal_mansions/slider_1.png",
+    "/uploads/royal_mansions/slider_2.png",
+    "/uploads/royal_mansions/club_house.jpg",
+    "/uploads/royal_mansions/grand_entry.jpg",
+    "/uploads/royal_mansions/morden_amenties.jpg",
+    "/uploads/royal_mansions/swimming_pool.jpg",
+    "/uploads/royal_mansions/top-view.jpg"
+  ],
+  "faqs": [
+    { "q": "What is the villa configuration?", "a": "Royal Mansions offers 5BHK ultra-luxury villas with multiple orientations and extended garden options." },
+    { "q": "What is the RERA registration number?", "a": "PR/GJ/VADODARA/VADODARA/Villas/RN301AA10201/270223" },
+    { "q": "Is a virtual tour available?", "a": "Yes. A virtual walkthrough is available on request — please book an appointment for access." },
+    { "q": "What payment modes are accepted?", "a": "Bank transfer (NEFT / RTGS / IMPS), cheque and approved home-loan disbursements. Cash is not accepted." },
+    { "q": "Notes", "a": "Plans, specifications, amenities and images are indicative. Dimensions, colours and finishes may vary." }
+  ],
+  "mapEmbed": "https://www.google.com/maps?q=22.2640956,73.1377952&output=embed"
+}

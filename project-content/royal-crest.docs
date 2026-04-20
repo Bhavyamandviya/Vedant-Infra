@@ -1,0 +1,68 @@
+{
+  "slug": "royal-crest",
+  "folder": "royal_crest",
+  "name": "Royal Crest",
+  "tagline": "4BHK Luxurious Bungalow",
+  "location": "Kalali, Vadodara",
+  "rera": "PR/GJ/VADODARA/VADODARA/Others/RAA06578/070120",
+  "architect": "Ruchir Sheth",
+  "type": "Bungalow",
+  "status": "latest",
+  "hero": "/uploads/royal_crest/MAIN1.jpg",
+  "thumbnail": "/uploads/royal_crest/main2.jpg",
+  "summary": "Lavish royal residences welcome your arrival at Royal Crest. Here, find the tiniest details carved to perfection, with landscaped promenades and grand foyers that your family will fall in love with.",
+  "description": "Royalty demands room for your passion — which is taken care of here at Royal Crest. Enormous residences with ample space to flaunt your fleet of vehicles and an impressive foyer is the first thing your family will fall in love with. Every corner is considered; every finish is deliberate.",
+  "brochure": "/uploads/royal_crest/MAIN1.jpg",
+  "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
+  "overview": {
+    "topView": "/uploads/royal_crest/top-view-with-number.jpg",
+    "elevation": "/uploads/royal_crest/main2.jpg",
+    "layouts": [
+      { "src": "/uploads/royal_crest/KEY.jpg", "label": "Key Plan" },
+      { "src": "/uploads/royal_crest/sqft.png", "label": "Unit Area" },
+      { "src": "/uploads/royal_crest/club_g.png", "label": "Club House Ground" }
+    ]
+  },
+  "projectAmenities": [
+    { "icon": "/amenities_icons/entrancegate.png", "label": "Grand Entrance" },
+    { "icon": "/amenities_icons/security.png", "label": "24x7 Security" },
+    { "icon": "/amenities_icons/cctv.png", "label": "CCTV Common Area" },
+    { "icon": "/amenities_icons/road.png", "label": "Tremix Internal Roads" },
+    { "icon": "/amenities_icons/street.png", "label": "LED Street Lighting" },
+    { "icon": "/amenities_icons/garden.png", "label": "Lush Green Common Area" },
+    { "icon": "/amenities_icons/gym.png", "label": "A/C Gymnasium" },
+    { "icon": "/amenities_icons/child.png", "label": "Children's Play Area" },
+    { "icon": "/amenities_icons/games.png", "label": "Game Room" },
+    { "icon": "/amenities_icons/AMPHITHEATER.png", "label": "Amphitheater" },
+    { "icon": "/amenities_icons/aqua.png", "label": "Aqua Water Purifier" },
+    { "icon": "/amenities_icons/phone.png", "label": "Video Door Phone" }
+  ],
+  "villaAmenities": [
+    { "icon": "/amenities_icons/bedroom.png", "label": "4 Bedrooms" },
+    { "icon": "/amenities_icons/bathroom.png", "label": "4 Bathrooms" },
+    { "icon": "/amenities_icons/kitchen.png", "label": "Designer Kitchen" },
+    { "icon": "/amenities_icons/gazebo.png", "label": "Gazebo Terrace" },
+    { "icon": "/amenities_icons/garden.png", "label": "Private Garden" },
+    { "icon": "/amenities_icons/shelf.png", "label": "Store Room" },
+    { "icon": "/amenities_icons/structure.png", "label": "Earthquake Resistant" },
+    { "icon": "/amenities_icons/flooring.png", "label": "Italian Tile Flooring" }
+  ],
+  "gallery": [
+    "/uploads/royal_crest/MAIN1.jpg",
+    "/uploads/royal_crest/main2.jpg",
+    "/uploads/royal_crest/entrance.jpg",
+    "/uploads/royal_crest/club.jpg",
+    "/uploads/royal_crest/gazebo.jpg",
+    "/uploads/royal_crest/sky.jpg",
+    "/uploads/royal_crest/slider_1.jpg",
+    "/uploads/royal_crest/slider_2.jpg"
+  ],
+  "faqs": [
+    { "q": "What is the villa configuration?", "a": "Royal Crest offers 4BHK luxurious bungalows across 30 carefully planned plots." },
+    { "q": "What is the RERA registration number?", "a": "PR/GJ/VADODARA/VADODARA/Others/RAA06578/070120" },
+    { "q": "Are payment plans flexible?", "a": "Yes. Construction-linked and milestone-based payment plans are available on request." },
+    { "q": "What payment modes are accepted?", "a": "Bank transfer (NEFT / RTGS / IMPS), cheque and approved home-loan disbursements. Cash is not accepted." },
+    { "q": "Notes", "a": "Prices, specifications and plans are indicative and subject to change without notice. Images are artistic impressions." }
+  ],
+  "mapEmbed": "https://www.google.com/maps?q=Kalali,Vadodara&output=embed"
+}

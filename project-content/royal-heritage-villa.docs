@@ -1,0 +1,79 @@
+{
+  "slug": "royal-heritage-villa",
+  "folder": "royal_heritage_villa",
+  "name": "Royal Heritage Villa",
+  "tagline": "5BHK Luxurious Villa",
+  "location": "Kalali, Vadodara",
+  "rera": "PR/GJ/VADODARA/VADODARA/Villas/RAA10456/160722",
+  "architect": "Ruchir Sheth",
+  "type": "Villa",
+  "status": "latest",
+  "hero": "/uploads/royal_heritage_villa/slider_1.png",
+  "thumbnail": "/uploads/royal_heritage_villa/slider_2.png",
+  "summary": "Inspired by French architecture, Royal Heritage Villa represents the epitome of royal luxury — villas crafted with meticulous attention to detail for the discerning few.",
+  "description": "These villas are meant for a select few elite like-minded families that make this place more than just a township — they make it an extended family. A private club house, tennis courts, multipurpose halls and wellness spaces anchor a life of quiet privilege.",
+  "brochure": "/uploads/royal_heritage_villa/slider_1.png",
+  "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
+  "overview": {
+    "topView": "/uploads/royal_heritage_villa/sitemap.png",
+    "elevation": "/uploads/royal_heritage_villa/slider_2.png",
+    "layouts": [
+      { "src": "/uploads/royal_heritage_villa/plan/top-view-with-number.jpg", "label": "Master Site Plan" },
+      { "src": "/uploads/royal_heritage_villa/plan/01.png", "label": "Plot 01" },
+      { "src": "/uploads/royal_heritage_villa/plan/02_17.png", "label": "Plot 02 & 17" },
+      { "src": "/uploads/royal_heritage_villa/plan/08.png", "label": "Plot 08" },
+      { "src": "/uploads/royal_heritage_villa/plan/09.png", "label": "Plot 09" },
+      { "src": "/uploads/royal_heritage_villa/plan/10_21.png", "label": "Plot 10 & 21" },
+      { "src": "/uploads/royal_heritage_villa/plan/22_23.png", "label": "Plot 22 & 23" },
+      { "src": "/uploads/royal_heritage_villa/plan/24_35.png", "label": "Plot 24 & 35" },
+      { "src": "/uploads/royal_heritage_villa/plan/36.png", "label": "Plot 36" },
+      { "src": "/uploads/royal_heritage_villa/plan/37.png", "label": "Plot 37" },
+      { "src": "/uploads/royal_heritage_villa/plan/38_43.png", "label": "Plot 38 & 43" },
+      { "src": "/uploads/royal_heritage_villa/plan/44.png", "label": "Plot 44" }
+    ]
+  },
+  "projectAmenities": [
+    { "icon": "/amenities_icons/entrancegate.png", "label": "Grand Entrance" },
+    { "icon": "/amenities_icons/water.png", "label": "Swimming Pool" },
+    { "icon": "/amenities_icons/walking.png", "label": "Tennis Court" },
+    { "icon": "/amenities_icons/games.png", "label": "Badminton Court" },
+    { "icon": "/amenities_icons/AMPHITHEATER.png", "label": "Amphitheater" },
+    { "icon": "/amenities_icons/multi-purpose-hall.png", "label": "Multipurpose Hall" },
+    { "icon": "/amenities_icons/library.png", "label": "Library" },
+    { "icon": "/amenities_icons/gym.png", "label": "Fitness Center" },
+    { "icon": "/amenities_icons/yoga.png", "label": "Yoga Studio" },
+    { "icon": "/amenities_icons/seating.png", "label": "Home Theater" },
+    { "icon": "/amenities_icons/home.png", "label": "Cafe" },
+    { "icon": "/amenities_icons/child.png", "label": "Children's Play Area" },
+    { "icon": "/amenities_icons/security.png", "label": "24x7 Security" },
+    { "icon": "/amenities_icons/cctv.png", "label": "CCTV Surveillance" }
+  ],
+  "villaAmenities": [
+    { "icon": "/amenities_icons/bedroom.png", "label": "5 Bedrooms" },
+    { "icon": "/amenities_icons/bathroom.png", "label": "Designer Bathrooms" },
+    { "icon": "/amenities_icons/kitchen.png", "label": "Modern Kitchen" },
+    { "icon": "/amenities_icons/garden.png", "label": "Private Garden" },
+    { "icon": "/amenities_icons/terrace.png", "label": "Open Terrace" },
+    { "icon": "/amenities_icons/gazebo.png", "label": "Gazebo" },
+    { "icon": "/amenities_icons/shelf.png", "label": "Store Room" },
+    { "icon": "/amenities_icons/structure.png", "label": "RCC Structure" }
+  ],
+  "gallery": [
+    "/uploads/royal_heritage_villa/slider_1.png",
+    "/uploads/royal_heritage_villa/slider_2.png",
+    "/uploads/royal_heritage_villa/club_house.jpg",
+    "/uploads/royal_heritage_villa/multipurpose_hall.jpg",
+    "/uploads/royal_heritage_villa/swimming_pool.jpg",
+    "/uploads/royal_heritage_villa/tennis.jpg",
+    "/uploads/royal_heritage_villa/sky.jpg",
+    "/uploads/royal_heritage_villa/sitemap.png"
+  ],
+  "faqs": [
+    { "q": "What is the villa configuration?", "a": "Royal Heritage Villa offers 5BHK luxurious villas across 44 thoughtfully designed plot types." },
+    { "q": "What is the RERA registration number?", "a": "PR/GJ/VADODARA/VADODARA/Villas/RAA10456/160722" },
+    { "q": "Are payment plans flexible?", "a": "Yes. Tailored construction-linked schedules and bank-approved loan plans are available." },
+    { "q": "What payment modes are accepted?", "a": "Bank transfer (NEFT / RTGS / IMPS), cheque and approved home-loan disbursements. Cash is not accepted." },
+    { "q": "Notes", "a": "All plans, specifications and imagery are indicative and subject to change. Figures and views are artistic impressions." }
+  ],
+  "mapEmbed": "https://www.google.com/maps?q=Kalali,Vadodara&output=embed"
+}
