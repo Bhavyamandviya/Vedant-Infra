@@ -32,11 +32,18 @@ export default function Parallax({ children, speed = 0.2, className = "" }: Prop
   }, [speed]);
 
   return (
-    <div ref={ref} className={className} style={{ overflow: "hidden" }}>
+    // Remove overflow:hidden here — let the parent clip instead
+    <div ref={ref} className={className}>
       <div
         style={{
           transform: `translate3d(0, ${offset}px, 0)`,
-          willChange: "transform"
+          willChange: "transform",
+          // Scale up slightly so edges don't show when shifted
+          scale: "1.15",
+          height: "100%",
+          width: "100%",
+          position: "absolute",
+          inset: 0,
         }}
       >
         {children}
