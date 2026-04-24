@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "./NewsletterForm";
+import FooterBrochures from "./FooterBrochures";
 import { COMPANY } from "@/lib/company";
 
 const LEGAL = [
@@ -32,19 +33,13 @@ export default function Footer() {
           <div className="eyebrow !text-white/70 mb-5">Explore</div>
           <ul className="space-y-3 text-sm text-white/85">
             <li><Link href="/projects" className="hover:text-gold">All Projects</Link></li>
-            <li><Link href="/latest-launches" className="hover:text-gold">Latest Launches</Link></li>
             <li><Link href="/about" className="hover:text-gold">About Us</Link></li>
-            <li><Link href="/news" className="hover:text-gold">In the News</Link></li>
+            <li><Link href="/awards" className="hover:text-gold">Awards</Link></li>
             <li><Link href="/book-appointment" className="hover:text-gold">Book Appointment</Link></li>
           </ul>
 
           <div className="eyebrow !text-white/70 mb-4 mt-10">Brochures</div>
-          <ul className="space-y-3 text-sm text-white/85">
-            <li><a href="/brochures/royal_mansions.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Mansions</a></li>
-            <li><a href="/brochures/royal_heritage_villa.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Heritage Villa</a></li>
-            <li><a href="/brochures/park_royal.pdf" target="_blank" rel="noopener" className="hover:text-gold">Park Royal</a></li>
-            <li><a href="/brochures/royal_crest.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Crest</a></li>
-          </ul>
+          <FooterBrochures />
         </div>
 
         <div className="lg:col-span-5">

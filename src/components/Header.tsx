@@ -8,10 +8,8 @@ import { usePathname } from "next/navigation";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/latest-launches", label: "Latest Launches" },
   { href: "/about", label: "About Us" },
-  { href: "/awards", label: "Awards" },
-  { href: "/news", label: "In the News" }
+  { href: "/awards", label: "Awards" }
 ];
 
 export default function Header({ transparent = false }: { transparent?: boolean }) {

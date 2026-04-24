@@ -12,7 +12,13 @@
       "Bash(npx next *)",
       "Bash(cmd //c \"rmdir /s /q .next\")",
       "Bash(cmd //c \"taskkill /F /IM node.exe /T\")",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(taskkill /F /IM node.exe /T)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 2; Remove-Item -Recurse -Force \"D:\\\\VedantInfra\\\\upload\\\\.next\" -ErrorAction SilentlyContinue; Get-ChildItem \"D:\\\\VedantInfra\\\\upload\" | Where-Object { $_.Name -eq \".next\" } | Select-Object Name)",
+      "Bash(rm -rf .next)",
+      "Bash(NEXT_PRIVATE_DEBUG_CACHE=1 npx next build)",
+      "Bash(npm uninstall *)",
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)"
     ]
   }
 }
