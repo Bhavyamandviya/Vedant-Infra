@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "./NewsletterForm";
+import { COMPANY } from "@/lib/company";
 
 const LEGAL = [
   { href: "/legal/privacy", label: "Privacy Policy" },
@@ -15,20 +16,15 @@ export default function Footer() {
     <footer className="bg-footer text-white">
       <div className="container py-20 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <Image
-            src="/logos_src/vedant_white_logo.png"
-            alt="Vedant Infra"
-            width={170}
-            height={50}
-          />
+          <Image src="/logos_src/vedant_white_logo.png" alt="Vedant Infra" width={170} height={50} />
           <p className="text-white/75 text-sm leading-relaxed max-w-sm">
             Crafting considered homes and landmark communities in Vadodara for
             families that value quiet excellence.
           </p>
-          <div className="text-sm text-white/75 space-y-1">
-            <div>Kalali, Vadodara, Gujarat</div>
-            <div>info@vedantinfra.com</div>
-            <div>+91 00000 00000</div>
+          <div className="text-sm text-white/80 space-y-2">
+            <div className="leading-relaxed">{COMPANY.contact.address}</div>
+            <div><a href={`tel:${COMPANY.contact.phone.replace(/\s/g, "")}`} className="hover:text-gold transition-colors">{COMPANY.contact.phone}</a></div>
+            <div><a href={`mailto:${COMPANY.contact.email}`} className="hover:text-gold transition-colors">{COMPANY.contact.email}</a></div>
           </div>
         </div>
 
@@ -41,13 +37,20 @@ export default function Footer() {
             <li><Link href="/news" className="hover:text-gold">In the News</Link></li>
             <li><Link href="/book-appointment" className="hover:text-gold">Book Appointment</Link></li>
           </ul>
+
+          <div className="eyebrow !text-white/70 mb-4 mt-10">Brochures</div>
+          <ul className="space-y-3 text-sm text-white/85">
+            <li><a href="/brochures/royal_mansions.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Mansions</a></li>
+            <li><a href="/brochures/royal_heritage_villa.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Heritage Villa</a></li>
+            <li><a href="/brochures/park_royal.pdf" target="_blank" rel="noopener" className="hover:text-gold">Park Royal</a></li>
+            <li><a href="/brochures/royal_crest.pdf" target="_blank" rel="noopener" className="hover:text-gold">Royal Crest</a></li>
+          </ul>
         </div>
 
         <div className="lg:col-span-5">
           <div className="eyebrow !text-white/70 mb-5">Newsletter</div>
           <p className="text-sm text-white/75 mb-5 max-w-md">
-            Receive updates on new launches and invitations to private
-            previews.
+            Receive updates on new launches and invitations to private previews.
           </p>
           <NewsletterForm />
         </div>
@@ -57,15 +60,13 @@ export default function Footer() {
         <div className="container py-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/70">
             {LEGAL.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-white">
-                {item.label}
-              </Link>
+              <Link key={item.href} href={item.href} className="hover:text-white">{item.label}</Link>
             ))}
           </div>
-          <div className="flex items-center gap-4 text-xs text-white/70">
-            <a href="#" aria-label="Instagram" className="hover:text-white">Instagram</a>
-            <a href="#" aria-label="Facebook" className="hover:text-white">Facebook</a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-white">LinkedIn</a>
+          <div className="flex items-center gap-5 text-xs text-white/70">
+            <a href={COMPANY.contact.social.facebook} target="_blank" rel="noopener" className="hover:text-gold">Facebook</a>
+            <a href={COMPANY.contact.social.instagram} target="_blank" rel="noopener" className="hover:text-gold">Instagram</a>
+            <a href={COMPANY.contact.social.linkedin} target="_blank" rel="noopener" className="hover:text-gold">LinkedIn</a>
           </div>
         </div>
       </div>

@@ -11,7 +11,8 @@
       "Bash(npm install *)",
       "Bash(npx next *)",
       "Bash(cmd //c \"rmdir /s /q .next\")",
-      "Bash(cmd //c \"taskkill /F /IM node.exe /T\")"
+      "Bash(cmd //c \"taskkill /F /IM node.exe /T\")",
+      "Bash(pip install *)"
     ]
   }
 }

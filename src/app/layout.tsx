@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import FirstVisitPopup from "@/components/FirstVisitPopup";
+import IntroLoader from "@/components/IntroLoader";
 
 export const metadata: Metadata = {
   title: "Vedant Infra — Luxury Residences in Vadodara",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-bg text-ink-primary">
+        <IntroLoader />
         {children}
         <Footer />
         <FirstVisitPopup />

@@ -33,6 +33,7 @@ export interface ProjectContent {
   type?: string;
   status?: "latest" | "completed" | string;
   hero: string;
+  heroVideo?: string;
   thumbnail: string;
   summary: string;
   description: string;

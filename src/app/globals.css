@@ -94,3 +94,76 @@ h1, h2, h3, h4, h5 {
 }
 .input-line:focus { border-color: #db9d23; }
 .input-line::placeholder { color: #9ca3af; }
+
+/* ===== Marquee ===== */
+.marquee { overflow: hidden; width: 100%; }
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll linear infinite;
+}
+.marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+.marquee-item { flex-shrink: 0; }
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* ===== Hero kenburns ===== */
+@keyframes kenburns {
+  0% { transform: scale(1.08) translate3d(0, 0, 0); }
+  100% { transform: scale(1.18) translate3d(-1.5%, -1%, 0); }
+}
+.kenburns { animation: kenburns 16s ease-out forwards; }
+
+/* ===== Shimmer underline ===== */
+@keyframes shimmer-line {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===== Fade in up small utility ===== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.anim-fade-up { animation: fade-up 900ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ===== Intro loader ===== */
+@keyframes intro-bar-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes intro-out { to { opacity: 0; visibility: hidden; } }
+.intro-overlay { animation: intro-out 600ms ease 2000ms forwards; }
+.intro-bar { transform-origin: left center; animation: intro-bar-in 1700ms cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+
+/* ===== Smooth scroll + global polish ===== */
+html { scroll-behavior: smooth; }
+
+::selection { background: #db9d23; color: #fff; }
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #c7c7c7; }
+::-webkit-scrollbar-thumb:hover { background: #db9d23; }
+
+/* ===== Marquee strip with gold dividers ===== */
+.mark-divider {
+  width: 6px;
+  height: 6px;
+  background: #db9d23;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ===== Reduce motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .kenburns, .intro-overlay, .intro-bar, .anim-fade-up {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
