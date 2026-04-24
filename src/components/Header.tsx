@@ -40,7 +40,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       <div className="container flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={solid ? "/logos_src/vedant_logo.png" : "/logos_src/vedant_white_logo.png"}
+            src={solid ? "/logos_src/1mini-logo.png" : "/logos_src/1mini-logo.png"}
             alt="Vedant Infra"
             width={140}
             height={40}
