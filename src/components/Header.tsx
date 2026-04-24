@@ -40,11 +40,12 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       <div className="container flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={solid ? "/logos_src/1mini-logo.png" : "/logos_src/1mini-logo.png"}
+            src={solid ? "/logos_src/logo-2.png" : "/logos_src/logo-2.png"}
             alt="Vedant Infra"
             width={140}
-            height={40}
+            height={20}
             priority
+            style={{height:"70px",width:"auto"}}
           />
         </Link>
 
