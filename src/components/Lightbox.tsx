@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 interface LightboxImage {
   src: string;
@@ -27,7 +28,10 @@ export default function Lightbox({ images, index, onClose, onIndexChange }: Prop
   const [scale, setScale] = useState(1);
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dragStart = useRef({ x: 0, y: 0, tx: 0, ty: 0 });
+
+  useEffect(() => { setMounted(true); }, []);
 
   const reset = useCallback(() => {
     setScale(1);
@@ -93,11 +97,11 @@ export default function Lightbox({ images, index, onClose, onIndexChange }: Prop
   };
 
   const current = images[index];
-  if (!current) return null;
+  if (!current || !mounted) return null;
 
-  return (
+  const overlay = (
     <div
-      className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-sm flex items-center justify-center select-none animate-[fadeIn_220ms_ease]"
+      className="fixed inset-0 z-[2147483647] bg-black/95 backdrop-blur-sm flex items-center justify-center select-none animate-[brochure-fade_220ms_ease]"
       style={{ animationFillMode: "both" }}
       role="dialog"
       aria-modal="true"
@@ -191,10 +195,8 @@ export default function Lightbox({ images, index, onClose, onIndexChange }: Prop
       <div className="absolute bottom-5 left-0 right-0 text-center text-[10px] tracking-[0.22em] uppercase text-white/40">
         Scroll to zoom · Drag to pan · Esc to close
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
-      `}</style>
     </div>
   );
+
+  return createPortal(overlay, document.body);
 }
