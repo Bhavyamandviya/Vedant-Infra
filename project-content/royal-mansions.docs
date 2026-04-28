@@ -9,7 +9,7 @@
   "type": "Villa",
   "status": "latest",
   "hero": "/uploads/royal_mansions/banner.png",
-  "thumbnail": "/uploads/royal_mansions/slider_1.png",
+  "thumbnail": "/uploads/royal_mansions/slider_2.png",
   "summary": "Royal Mansions represents the pinnacle of luxury living in Vadodara — ultra-luxury villas designed for those who demand the very best.",
   "description": "Every element has been meticulously crafted to provide an unparalleled living experience combined with world-class amenities and architectural excellence. A sky sanctuary, a two-building club house and a suite of wellness spaces complete the address.",
   "brochure": "/brochures/royal_mansions.pdf",
@@ -59,7 +59,6 @@
   ],
   "gallery": [
     "/uploads/royal_mansions/banner.png",
-    "/uploads/royal_mansions/slider_1.png",
     "/uploads/royal_mansions/slider_2.png",
     "/uploads/royal_mansions/club_house.jpg",
     "/uploads/royal_mansions/grand_entry.jpg",

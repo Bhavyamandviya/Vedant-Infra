@@ -16,7 +16,7 @@ export default function GalleryGrid({ images, projectName }: { images: string[];
             <button
               onClick={() => setOpenIndex(i)}
               className={[
-                "relative overflow-hidden group block w-full",
+                "relative overflow-hidden rounded-2xl group block w-full",
                 i % 5 === 0 ? "col-span-2 aspect-[16/10]" : "aspect-square",
               ].join(" ")}
             >

@@ -77,12 +77,12 @@ export default async function HomePage() {
           <div className="lg:col-span-5">
             <div className="grid grid-cols-2 gap-4">
               <Reveal direction="up" delay={0}>
-                <Parallax speed={0.12} className="relative aspect-[4/5]">
+                <Parallax speed={0.12} className="relative aspect-[4/5] overflow-hidden rounded-2xl">
                   <Image src="/uploads/royal_crest/about.png" alt="About" fill sizes="20vw" className="object-cover" />
                 </Parallax>
               </Reveal>
               <Reveal direction="up" delay={200}>
-                <Parallax speed={-0.1} className="relative aspect-[4/5] mt-10">
+                <Parallax speed={-0.1} className="relative aspect-[4/5] overflow-hidden rounded-2xl mt-10">
                   <Image src="/uploads/royal_heritage_villa/club_house.jpg" alt="Club" fill sizes="20vw" className="object-cover" />
                 </Parallax>
               </Reveal>
@@ -125,7 +125,7 @@ export default async function HomePage() {
           </div>
           <div className="lg:col-span-7">
             <Reveal direction="scale">
-              <div className="relative aspect-[16/10] overflow-hidden border border-white/10 group">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 group">
                 <video
                   src="/videos/logo.mp4"
                   autoPlay muted loop playsInline preload="metadata"
@@ -140,11 +140,11 @@ export default async function HomePage() {
       </section>
 
       {/* ========= 5. STATS COUNTERS ========= */}
-      <section className="bg-white border-b border-black/5">
+      <section className="bg-bg border-b border-gold/10">
         <div className="container py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/10 border border-black/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gold/10 border border-gold/10">
             {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={i * 100} className="bg-white p-10 md:p-12 text-center">
+              <Reveal key={s.label} delay={i * 100} className="bg-bg-elev p-10 md:p-12 text-center">
                 <div className="font-serif text-5xl md:text-6xl text-ink-primary leading-none">
                   <Counter to={s.n} suffix={s.suffix} />
                 </div>
@@ -172,9 +172,9 @@ export default async function HomePage() {
             </Reveal>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10 border border-black/10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/10 border border-gold/10">
             {KEY_FEATURES.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="bg-white p-10 md:p-12 group hover:bg-bg transition-colors">
+              <Reveal key={p.title} delay={i * 80} className="bg-bg-elev p-10 md:p-12 group hover:bg-bg transition-colors">
                 <div className="relative w-12 h-12 mb-8 transition-transform duration-500 group-hover:scale-110">
                   <Image src={p.icon} alt="" fill sizes="48px" className="object-contain" />
                 </div>
@@ -187,7 +187,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========= 7. FEATURED PROJECTS ========= */}
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-28 md:py-36">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
             <div>
@@ -264,7 +264,7 @@ export default async function HomePage() {
         <Marquee
           speed={55}
           items={TROPHIES.map((src, i) => (
-            <div key={i} className="relative w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden bg-white shadow-sm">
+            <div key={i} className="relative w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-2xl bg-bg-elev shadow-sm border border-gold/10">
               <Image src={src} alt={`Award ${i + 1}`} fill sizes="260px" className="object-cover" />
             </div>
           ))}
@@ -274,7 +274,7 @@ export default async function HomePage() {
           reverse
           className="mt-4"
           items={TROPHIES.slice().reverse().map((src, i) => (
-            <div key={`r-${i}`} className="relative w-[180px] md:w-[220px] aspect-[3/4] overflow-hidden bg-white shadow-sm">
+            <div key={`r-${i}`} className="relative w-[180px] md:w-[220px] aspect-[3/4] overflow-hidden rounded-2xl bg-bg-elev shadow-sm border border-gold/10">
               <Image src={src} alt={`Award ${i + 1}`} fill sizes="220px" className="object-cover" />
             </div>
           ))}
@@ -319,7 +319,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========= 11. TESTIMONIALS ========= */}
-      <section className="bg-white">
+      <section className="bg-bg">
         <div className="container py-28 md:py-36">
           <div className="text-center mb-14">
             <Reveal><div className="eyebrow mb-5">Our Residents</div></Reveal>

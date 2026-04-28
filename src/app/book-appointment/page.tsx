@@ -26,14 +26,14 @@ export default async function BookAppointmentPage({
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-20 md:py-28 grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-7">
             <AppointmentForm projects={projects} defaultProject={project} />
           </div>
 
           <aside className="lg:col-span-5 lg:pl-6">
-            <div className="relative aspect-[4/5] overflow-hidden mb-10 bg-black/5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-10 bg-bg-elev">
               <Image src="/uploads/royal_mansions/grand_entry.jpg" alt="Vedant Infra" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
             <div className="eyebrow mb-4">Studio</div>

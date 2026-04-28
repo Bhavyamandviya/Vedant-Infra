@@ -5,6 +5,7 @@ export interface ProjectCardData {
   location: string;
   thumbnail: string;
   status?: "latest" | "completed" | string;
+  bookingAvailable?: boolean;
 }
 
 export interface ProjectLayout {
@@ -32,6 +33,7 @@ export interface ProjectContent {
   architect?: string;
   type?: string;
   status?: "latest" | "completed" | string;
+  bookingAvailable?: boolean;
   hero: string;
   heroVideo?: string;
   thumbnail: string;

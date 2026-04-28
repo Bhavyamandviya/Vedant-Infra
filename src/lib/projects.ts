@@ -39,7 +39,8 @@ export async function listProjects(filter?: "latest" | "completed"): Promise<Pro
       tagline: p.tagline,
       location: p.location,
       thumbnail: p.thumbnail,
-      status: p.status
+      status: p.status,
+      bookingAvailable: p.bookingAvailable
     });
   }
   return items;

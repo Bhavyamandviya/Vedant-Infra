@@ -7,8 +7,9 @@ import VideoHero from "@/components/VideoHero";
 import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
 import LayoutsGallery from "@/components/LayoutsGallery";
-import GalleryGrid from "@/components/GalleryGrid";
+import EnhancedGallery from "@/components/EnhancedGallery";
 import BrochureButton from "@/components/BrochureButton";
+import Marquee from "@/components/motion/Marquee";
 import { getProjectContent, getProjectSlugs } from "@/lib/projects";
 
 export const dynamic = "force-static";
@@ -84,7 +85,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 text-[10px] tracking-[0.3em] uppercase flex flex-col items-center gap-2">
             <span>Scroll</span>
-            <span className="w-px h-10 bg-white/30 relative overflow-hidden">
+            <span className="w-px h-10 bg-bg-elev/30 relative overflow-hidden">
               <span className="absolute inset-x-0 top-0 h-1/2 bg-gold animate-[float-soft_2.4s_ease-in-out_infinite]" />
             </span>
           </div>
@@ -92,7 +93,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       )}
 
       {/* B. QUICK FACTS STRIP */}
-      <section className="border-b border-black/5 bg-white">
+      <section className="border-b border-gold/10 bg-bg-elev">
         <div className="container py-8 md:py-10 grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-8">
           {facts.map((f, i) => (
             <Reveal key={f.label} delay={i * 80}>
@@ -143,21 +144,21 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
           <div className="lg:col-span-7 grid grid-cols-1 gap-8">
             <Reveal direction="scale">
-              <div className="relative aspect-[16/10] overflow-hidden lift-on-hover">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl lift-on-hover">
                 <Parallax speed={0.06}>
                   <Image src={project.overview.topView} alt="Top view" fill sizes="60vw" className="object-cover" />
                 </Parallax>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-[10px] tracking-[0.22em] uppercase text-ink-primary">
+                <div className="absolute bottom-4 left-4 bg-bg-elev/95 border border-gold/30 backdrop-blur px-4 py-2 text-[10px] tracking-[0.22em] uppercase text-ink-primary rounded-lg">
                   Top View
                 </div>
               </div>
             </Reveal>
             <Reveal direction="scale" delay={120}>
-              <div className="relative aspect-[16/9] overflow-hidden lift-on-hover">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl lift-on-hover">
                 <Parallax speed={-0.05}>
                   <Image src={project.overview.elevation} alt="Elevation" fill sizes="60vw" className="object-cover" />
                 </Parallax>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-[10px] tracking-[0.22em] uppercase text-ink-primary">
+                <div className="absolute bottom-4 left-4 bg-bg-elev/95 border border-gold/30 backdrop-blur px-4 py-2 text-[10px] tracking-[0.22em] uppercase text-ink-primary rounded-lg">
                   Elevation
                 </div>
               </div>
@@ -168,7 +169,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
       {/* D. LAYOUTS — clickable / zoomable */}
       {project.overview.layouts.length > 0 && (
-        <section className="bg-white">
+        <section className="bg-bg-elev">
           <div className="container py-28 md:py-36">
             <div className="max-w-2xl mb-16">
               <Reveal>
@@ -216,76 +217,151 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
 
           {project.projectAmenities.length > 0 && (
-            <>
+            <div className="mb-20">
               <Reveal>
-                <div className="flex items-center gap-4 mb-10">
+                <div className="container flex items-center gap-4 mb-10">
                   <h3 className="text-2xl md:text-3xl text-ink-primary">Project Amenities</h3>
                   <div className="flex-1 section-rule" />
                 </div>
               </Reveal>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-6 mb-24">
-                {project.projectAmenities.map((a, i) => (
-                  <Reveal key={a.label} delay={i * 30}>
-                    <div className="flex flex-col items-center text-center group cursor-default">
-                      <div className="w-16 h-16 relative mb-4 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
-                        <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/10 rounded-full blur-xl transition-all duration-500" />
-                        <Image src={a.icon} alt={a.label} fill sizes="64px" className="object-contain relative" />
-                      </div>
-                      <div className="text-xs md:text-sm text-ink-secondary leading-snug group-hover:text-gold transition-colors">{a.label}</div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </>
-          )}
-
-          {project.villaAmenities.length > 0 && (
-            <>
-              <Reveal>
-                <div className="flex items-center gap-4 mb-10">
-                  <h3 className="text-2xl md:text-3xl text-ink-primary">Residence Amenities</h3>
-                  <div className="flex-1 section-rule" />
-                </div>
-              </Reveal>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-6">
-                {project.villaAmenities.map((a, i) => (
-                  <Reveal key={a.label} delay={i * 30}>
-                    <div className="flex flex-col items-center text-center group cursor-default">
-                      <div className="w-16 h-16 relative mb-4 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
-                        <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/10 rounded-full blur-xl transition-all duration-500" />
-                        <Image src={a.icon} alt={a.label} fill sizes="64px" className="object-contain relative" />
-                      </div>
-                      <div className="text-xs md:text-sm text-ink-secondary leading-snug group-hover:text-gold transition-colors">{a.label}</div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </>
+            </div>
           )}
         </div>
+
+        {/* Project amenities — infinite marquee */}
+        {project.projectAmenities.length > 0 && (
+          <div className="relative pb-20 -mt-20">
+            <Marquee
+              speed={45}
+              items={project.projectAmenities.map((a) => (
+                <div
+                  key={a.label}
+                  className="flex flex-col items-center text-center mx-8 md:mx-12 cursor-default group"
+                  style={{ minWidth: "120px" }}
+                >
+                  <div className="w-16 h-16 relative mb-3 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+                    <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/15 rounded-full blur-xl transition-all duration-500" />
+                    <Image
+                      src={a.icon}
+                      alt={a.label}
+                      fill
+                      sizes="64px"
+                      className="object-contain relative"
+                    />
+                  </div>
+                  <div className="text-xs md:text-sm text-ink-secondary leading-snug group-hover:text-gold transition-colors whitespace-nowrap">
+                    {a.label}
+                  </div>
+                </div>
+              ))}
+            />
+          </div>
+        )}
+
+        {project.villaAmenities.length > 0 && (
+          <div className="container">
+            <Reveal>
+              <div className="flex items-center gap-4 mb-10 mt-8">
+                <h3 className="text-2xl md:text-3xl text-ink-primary">Residence Amenities</h3>
+                <div className="flex-1 section-rule" />
+              </div>
+            </Reveal>
+          </div>
+        )}
+
+        {/* Residence amenities — infinite marquee, opposite direction */}
+        {project.villaAmenities.length > 0 && (
+          <div className="relative pb-28 md:pb-36 mt-2">
+            <Marquee
+              speed={55}
+              reverse
+              items={project.villaAmenities.map((a) => (
+                <div
+                  key={a.label}
+                  className="flex flex-col items-center text-center mx-8 md:mx-12 cursor-default group"
+                  style={{ minWidth: "120px" }}
+                >
+                  <div className="w-16 h-16 relative mb-3 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+                    <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/15 rounded-full blur-xl transition-all duration-500" />
+                    <Image
+                      src={a.icon}
+                      alt={a.label}
+                      fill
+                      sizes="64px"
+                      className="object-contain relative"
+                    />
+                  </div>
+                  <div className="text-xs md:text-sm text-ink-secondary leading-snug group-hover:text-gold transition-colors whitespace-nowrap">
+                    {a.label}
+                  </div>
+                </div>
+              ))}
+            />
+          </div>
+        )}
       </section>
 
-      {/* F. GALLERY */}
+      {/* F. GALLERY — editorial, defined */}
       {project.gallery.length > 0 && (
-        <section className="bg-white">
-          <div className="container py-28 md:py-36">
-            <div className="max-w-2xl mb-16">
-              <Reveal>
-                <div className="eyebrow mb-5 flex items-center gap-3">
-                  <span className="gold-divider" /> <span>Gallery</span>
+        <section className="bg-bg-elev relative overflow-hidden">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-32 -left-40 w-[36rem] h-[36rem] rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(219,157,35,0.06) 0%, transparent 60%)",
+            }}
+          />
+
+          <div className="container py-28 md:py-36 relative">
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-16 items-end">
+              <div className="lg:col-span-7">
+                <Reveal>
+                  <div className="eyebrow mb-5 flex items-center gap-3">
+                    <span className="gold-divider" /> <span>The Visual Record</span>
+                  </div>
+                </Reveal>
+                <Reveal delay={80}>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.04] mb-5">
+                    {project.name}, frame by{" "}
+                    <em className="not-italic text-shine">frame</em>.
+                  </h2>
+                </Reveal>
+                <Reveal delay={160}>
+                  <p className="text-ink-secondary leading-relaxed max-w-xl">
+                    A curated visual record of the residence — its arrival, its
+                    elevations, the community programme, the quiet interior
+                    moments. Filter by chapter or expand any frame in full
+                    cinematic view.
+                  </p>
+                </Reveal>
+              </div>
+
+              <Reveal delay={220} className="lg:col-span-5">
+                <div className="grid grid-cols-3 gap-px bg-gold/10 border border-gold/10">
+                  <div className="bg-bg-elev p-5 text-center">
+                    <div className="font-serif text-3xl text-ink-primary leading-none">
+                      {project.gallery.length}
+                    </div>
+                    <div className="eyebrow mt-2 !text-[9px]">Frames</div>
+                  </div>
+                  <div className="bg-bg-elev p-5 text-center">
+                    <div className="font-serif text-3xl text-ink-primary leading-none">
+                      4K
+                    </div>
+                    <div className="eyebrow mt-2 !text-[9px]">Resolution</div>
+                  </div>
+                  <div className="bg-bg-elev p-5 text-center">
+                    <div className="font-serif text-3xl text-gold leading-none">
+                      ●
+                    </div>
+                    <div className="eyebrow mt-2 !text-[9px]">Live Project</div>
+                  </div>
                 </div>
-              </Reveal>
-              <Reveal delay={80}>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.04] mb-5">
-                  Moments from {project.name}.
-                </h2>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="text-ink-secondary leading-relaxed">Tap any image to view full-screen.</p>
               </Reveal>
             </div>
 
-            <GalleryGrid images={project.gallery} projectName={project.name} />
+            <EnhancedGallery images={project.gallery} projectName={project.name} />
           </div>
         </section>
       )}
@@ -318,7 +394,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             </div>
             <div className="lg:col-span-8">
               <Reveal>
-                <div className="divide-y divide-black/10 border-t border-b border-black/10">
+                <div className="divide-y divide-gold/10 border-t border-b border-gold/10">
                   {project.faqs.map((f, i) => (
                     <details key={i} className="group py-6 cursor-pointer">
                       <summary className="flex justify-between items-center gap-6 list-none">
@@ -339,7 +415,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
       {/* H. LOCATION */}
       {project.mapEmbed && (
-        <section className="bg-white">
+        <section className="bg-bg-elev">
           <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-start">
             <div className="lg:col-span-4">
               <Reveal>
@@ -363,7 +439,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               </Reveal>
             </div>
             <Reveal delay={200} direction="scale" className="lg:col-span-8">
-              <div className="relative aspect-[16/10] bg-black/5 lift-on-hover">
+              <div className="relative aspect-[16/10] bg-bg-elev lift-on-hover rounded-2xl overflow-hidden">
                 <iframe
                   src={project.mapEmbed}
                   title={`${project.name} location`}

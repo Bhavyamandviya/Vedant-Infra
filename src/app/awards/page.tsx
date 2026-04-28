@@ -44,7 +44,7 @@ export default function AwardsPage() {
         <Marquee
           speed={55}
           items={TROPHIES.map((src, i) => (
-            <div key={i} className="relative w-[240px] md:w-[280px] aspect-[3/4] overflow-hidden bg-white shadow-sm">
+            <div key={i} className="relative w-[240px] md:w-[280px] aspect-[3/4] overflow-hidden bg-bg-elev shadow-sm rounded-2xl">
               <Image src={src} alt={`Award ${i + 1}`} fill sizes="280px" className="object-cover" />
             </div>
           ))}
@@ -52,7 +52,7 @@ export default function AwardsPage() {
       </section>
 
       {/* TROPHY GALLERY GRID */}
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-28 md:py-36">
           <Reveal><div className="eyebrow mb-5">The Cabinet</div></Reveal>
           <Reveal delay={80}>
@@ -63,7 +63,7 @@ export default function AwardsPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-7">
             {TROPHIES.map((src, i) => (
               <Reveal key={src} delay={(i % 8) * 60} direction="scale">
-                <div className="group relative aspect-[3/4] overflow-hidden bg-bg">
+                <div className="group relative aspect-[3/4] overflow-hidden bg-bg rounded-2xl">
                   <Image
                     src={src}
                     alt={`Trophy ${i + 1}`}
@@ -92,7 +92,7 @@ export default function AwardsPage() {
               Selected recognition.
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-2 gap-px bg-black/10 border border-black/10">
+          <div className="grid md:grid-cols-2 gap-px bg-gold/10 border border-gold/10">
             {HONOURS.map((a, i) => (
               <Reveal key={a.title} delay={(i % 4) * 80} className="bg-bg p-10 md:p-12">
                 <div className="eyebrow mb-4">{a.year}</div>

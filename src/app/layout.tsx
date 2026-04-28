@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import FirstVisitPopup from "@/components/FirstVisitPopup";
 import IntroLoader from "@/components/IntroLoader";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Vedant Infra — Luxury Residences in Vadodara",
@@ -13,14 +14,29 @@ export const metadata: Metadata = {
   }
 };
 
+// Inline script — runs before first paint, applies the saved theme
+// so there's no flash of the default Onyx palette on reload.
+const themeBootstrap = `
+(function(){
+  try {
+    var t = localStorage.getItem('vi-theme');
+    if (t && t !== 'forest') document.documentElement.setAttribute('data-theme', t);
+  } catch(e) {}
+})();
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
       <body className="min-h-screen bg-bg text-ink-primary">
         <IntroLoader />
         {children}
         <Footer />
         <FirstVisitPopup />
+        <ThemeSwitcher />
       </body>
       <script
       src="https://nlabs-neurons.vercel.app/scripts/rag-agent-widget.js"

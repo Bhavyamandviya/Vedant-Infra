@@ -34,7 +34,7 @@ export default async function ProjectsPage() {
         <section className="bg-bg">
           <div className="container">
             <Link href={`/projects/${hero.slug}`} className="group block">
-              <div className="relative aspect-[21/9] overflow-hidden bg-black/5">
+              <div className="relative aspect-[21/9] overflow-hidden bg-bg-elev rounded-3xl">
                 <Image
                   src={hero.thumbnail}
                   alt={hero.name}
@@ -56,19 +56,50 @@ export default async function ProjectsPage() {
         </section>
       )}
 
-      {/* GRID */}
-      <section className="bg-white pb-28 md:pb-36 pt-28">
+      {/* HORIZONTAL RAIL — every project in a single horizontal scroller */}
+      <section className="bg-bg-elev pb-28 md:pb-36 pt-28">
         <div className="container">
-          <div className="flex items-end justify-between mb-16 gap-6 flex-wrap">
+          <div className="flex items-end justify-between mb-12 gap-6 flex-wrap">
             <div>
               <div className="eyebrow mb-4">All Residences</div>
-              <h2 className="text-4xl md:text-5xl leading-tight max-w-xl">The complete portfolio.</h2>
+              <h2 className="text-4xl md:text-5xl leading-tight max-w-xl">
+                The complete portfolio.
+              </h2>
             </div>
-            <div className="text-sm text-ink-muted">{projects.length} communities</div>
+            <div className="flex items-center gap-4">
+              <div className="text-sm text-ink-muted">
+                {projects.length} communities · scroll →
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
-            {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
+        </div>
+
+        {/* Horizontal scroll rail — no grid, no wrap. Each card is a fixed
+            width column laid out left-to-right; user drags or scrolls. */}
+        <div className="relative">
+          <div className="overflow-x-auto pb-4 hide-scrollbar">
+            <div className="flex gap-8 lg:gap-12 pl-[max(1.25rem,calc((100vw-1280px)/2+1.25rem))] pr-6 md:pl-[max(2rem,calc((100vw-1280px)/2+2rem))] md:pr-12">
+              {projects.map((p) => (
+                <div
+                  key={p.slug}
+                  className="shrink-0 w-[300px] md:w-[360px] lg:w-[420px]"
+                >
+                  <ProjectCard project={p} />
+                </div>
+              ))}
+              {/* Trailing spacer */}
+              <div className="shrink-0 w-2" aria-hidden />
+            </div>
           </div>
+          {/* Right edge fade so the row hints there's more content */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-0 bottom-0 right-0 w-24"
+            style={{
+              background:
+                "linear-gradient(to right, transparent, var(--c-bg-elev) 80%)",
+            }}
+          />
         </div>
       </section>
 
@@ -76,7 +107,7 @@ export default async function ProjectsPage() {
       <section className="bg-bg">
         <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image src="/uploads/royal_mansions/sitemap.png" alt="Kalali, Vadodara" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
           </div>

@@ -20,9 +20,9 @@ export default function LayoutsGallery({ layouts }: { layouts: Layout[] }) {
           <Reveal key={l.src} delay={i * 70}>
             <button
               onClick={() => setOpenIndex(i)}
-              className="group block w-full text-left bg-white border border-black/5 hover:border-gold/40 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.18)] transition-all duration-500"
+              className="group block w-full text-left bg-bg-elev border border-gold/10 hover:border-gold/45 hover:shadow-[0_24px_60px_-24px_rgba(219,157,35,0.30)] transition-all duration-500 rounded-2xl overflow-hidden"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#fafafa]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#13100b]">
                 <Image
                   src={l.src}
                   alt={l.label}

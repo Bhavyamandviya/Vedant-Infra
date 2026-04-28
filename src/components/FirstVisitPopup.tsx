@@ -26,7 +26,7 @@ export default function FirstVisitPopup() {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-5">
       <div className="absolute inset-0 bg-black/60" onClick={close} />
-      <div className="relative max-w-lg w-full bg-white p-10 md:p-14 text-center">
+      <div className="relative max-w-lg w-full bg-bg-elev border border-gold/25 p-10 md:p-14 text-center">
         <button
           onClick={close}
           aria-label="Close"

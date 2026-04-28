@@ -18,7 +18,8 @@
       "Bash(rm -rf .next)",
       "Bash(NEXT_PRIVATE_DEBUG_CACHE=1 npx next build)",
       "Bash(npm uninstall *)",
-      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)"
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "Bash(npx tsc *)"
     ]
   }
 }

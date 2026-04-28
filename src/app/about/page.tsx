@@ -64,7 +64,7 @@ export default function AboutPage() {
       {/* STATS */}
       <section className="bg-bg">
         <div className="container pb-28 md:pb-36">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/10 border border-black/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gold/10 border border-gold/10">
             {STATS.map((s) => (
               <div key={s.label} className="bg-bg p-10 md:p-12 text-center">
                 <div className="font-serif text-4xl md:text-5xl text-ink-primary leading-none">{s.value}</div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
       </section>
 
       {/* DIRECTOR NOTE */}
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">A Note from the Director</div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden bg-black/5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg-elev">
               <Image src="/uploads/royal_heritage_villa/branding.png" alt="Director" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-5xl leading-[1.08] mb-16 max-w-xl">
             What we believe. What we build.
           </h2>
-          <div className="grid md:grid-cols-2 gap-px bg-black/10 border border-black/10">
+          <div className="grid md:grid-cols-2 gap-px bg-gold/10 border border-gold/10">
             {VALUES.map((v) => (
               <div key={v.title} className="bg-bg p-10 md:p-14">
                 <h3 className="text-2xl md:text-3xl leading-tight mb-5">{v.title}</h3>
@@ -131,17 +131,17 @@ export default function AboutPage() {
       </section>
 
       {/* TIMELINE */}
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-28 md:py-36">
           <div className="eyebrow mb-5">A Short History</div>
           <h2 className="text-4xl md:text-5xl leading-[1.08] mb-16 max-w-2xl">Two decades, five landmark addresses.</h2>
           <div className="relative grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
-              <div className="relative aspect-[4/5] overflow-hidden lg:sticky lg:top-28 bg-black/5">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl lg:sticky lg:top-28 bg-bg-elev">
                 <Image src="/uploads/royal_heritage_villa/slider_1.png" alt="Vedant Infra legacy" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
               </div>
             </div>
-            <ol className="lg:col-span-7 relative border-l border-black/15 pl-10 space-y-12">
+            <ol className="lg:col-span-7 relative border-l border-gold/20 pl-10 space-y-12">
               {TIMELINE.map((t) => (
                 <li key={t.year} className="relative">
                   <span className="absolute -left-[2.6rem] top-2 w-3 h-3 rounded-full bg-gold" aria-hidden />
@@ -159,7 +159,7 @@ export default function AboutPage() {
       <section className="bg-bg">
         <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5 lg:order-1 order-2">
-            <div className="relative aspect-[4/5] overflow-hidden bg-white">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg-elev">
               <Image src="/logos_src/ruchi.png" alt="Ruchir Sheth" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-10" />
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       {/* ZARNA */}
-      <section className="bg-white">
+      <section className="bg-bg-elev">
         <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">Structural Consultants</div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden bg-bg">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg">
               <Image src="/logos_src/zarana.png" alt="ZARNA Associates" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-10" />
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
         <div className="container py-28 md:py-36">
           <div className="eyebrow mb-5">Recognition</div>
           <h2 className="text-4xl md:text-5xl leading-[1.08] mb-16 max-w-xl">Awards & honours.</h2>
-          <div className="grid md:grid-cols-2 gap-px bg-black/10 border border-black/10">
+          <div className="grid md:grid-cols-2 gap-px bg-gold/10 border border-gold/10">
             {AWARDS.map((a) => (
               <div key={a.title} className="bg-bg p-10 md:p-12">
                 <div className="eyebrow mb-4">{a.year}</div>

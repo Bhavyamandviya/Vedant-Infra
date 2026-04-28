@@ -32,7 +32,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     <header
       className={[
         "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-        solid ? "bg-white/95 backdrop-blur border-b border-black/5" : "bg-transparent"
+        solid ? "bg-bg/95 backdrop-blur border-b border-gold/15" : "bg-transparent"
       ].join(" ")}
     >
       <div className="container flex items-center justify-between h-20">
@@ -54,7 +54,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               href={item.href}
               className={[
                 "text-[0.78rem] tracking-[0.18em] uppercase transition-colors",
-                solid ? "text-ink-primary hover:text-gold" : "text-white/90 hover:text-white"
+                solid ? "text-ink-primary hover:text-gold" : "text-ink-primary hover:text-gold"
               ].join(" ")}
             >
               {item.label}
@@ -67,7 +67,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
 
         <button
           aria-label="Menu"
-          className={["lg:hidden p-2", solid ? "text-ink-primary" : "text-white"].join(" ")}
+          className={["lg:hidden p-2 text-ink-primary"].join(" ")}
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -85,7 +85,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       </div>
 
       {open && (
-        <div className="lg:hidden bg-white border-t border-black/5">
+        <div className="lg:hidden bg-bg-elev border-t border-gold/15">
           <div className="container py-6 flex flex-col gap-5">
             {NAV.map((item) => (
               <Link

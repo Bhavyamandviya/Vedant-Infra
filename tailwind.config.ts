@@ -5,13 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#f9f9f9",
-        gold: "#db9d23",
-        footer: "#795532",
+        // All theme tokens are driven by CSS variables — see :root and the
+        // [data-theme="…"] blocks in globals.css. Switching the theme just
+        // sets data-theme on <html> and the whole site re-paints.
+        bg: "var(--c-bg)",
+        "bg-elev": "var(--c-bg-elev)",
+        "bg-line": "var(--c-bg-line)",
+        gold: "var(--c-accent)",
+        "gold-soft": "var(--c-accent-soft)",
+        footer: "var(--c-bg)",
         ink: {
-          primary: "#1a1a1a",
-          secondary: "#374151",
-          muted: "#6b7280"
+          primary: "var(--c-text)",
+          secondary: "var(--c-text-secondary)",
+          muted: "var(--c-text-muted)"
         }
       },
       fontFamily: {
