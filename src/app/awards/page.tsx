@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import CTASection from "@/components/CTASection";
 import Reveal from "@/components/motion/Reveal";
 import Marquee from "@/components/motion/Marquee";
-import { TROPHIES } from "@/lib/company";
+import { TROPHIES, FOUNDER_AWARDS } from "@/lib/company";
 
 export const metadata = { title: "Awards & Recognition — Vedant Infra" };
 
@@ -17,6 +17,8 @@ const HONOURS = [
 ];
 
 export default function AwardsPage() {
+  const allTrophies = [...TROPHIES, ...FOUNDER_AWARDS.slice(2).map(a => a.src)];
+
   return (
     <main>
       <Header />
@@ -43,7 +45,7 @@ export default function AwardsPage() {
       <section className="bg-bg pb-20">
         <Marquee
           speed={55}
-          items={TROPHIES.map((src, i) => (
+          items={allTrophies.map((src, i) => (
             <div key={i} className="relative w-[240px] md:w-[280px] aspect-[3/4] overflow-hidden bg-bg-elev shadow-sm rounded-2xl">
               <Image src={src} alt={`Award ${i + 1}`} fill sizes="280px" className="object-cover" />
             </div>
@@ -61,7 +63,7 @@ export default function AwardsPage() {
             </h2>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-7">
-            {TROPHIES.map((src, i) => (
+            {allTrophies.map((src, i) => (
               <Reveal key={src} delay={(i % 8) * 60} direction="scale">
                 <div className="group relative aspect-[3/4] overflow-hidden bg-bg rounded-2xl">
                   <Image

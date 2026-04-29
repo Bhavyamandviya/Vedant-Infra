@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Reveal from "@/components/motion/Reveal";
 import Lightbox from "@/components/Lightbox";
+import { FOUNDER_AWARDS } from "@/lib/company";
 
 /**
  * Founder + Recognition section.
@@ -12,58 +13,6 @@ import Lightbox from "@/components/Lightbox";
  * Times of India, IFA and Sitraaj. Three visual moods supported via the
  * `variant` prop so the same content can plug into different home-page designs.
  */
-
-const FOUNDER_AWARDS: { src: string; org: string; title: string; year: string; note: string }[] = [
-  {
-    src: "/Awards/Time-2 (1).jpg",
-    org: "The Times of India",
-    title: "Real Estate Icon — Vadodara",
-    year: "2024",
-    note: "Recognised by The Times Group for sustained excellence in residential development.",
-  },
-  {
-    src: "/Awards/Time-2 (2).jpg",
-    org: "The Times of India",
-    title: "Editor's Choice Honour",
-    year: "2024",
-    note: "Featured by The Times Group for craft, integrity and architectural restraint.",
-  },
-  {
-    src: "/Awards/Time-2 (3).jpg",
-    org: "The Times of India",
-    title: "Builder of the Year — Western India",
-    year: "2023",
-    note: "Awarded for pioneering bungalow communities across Vadodara.",
-  },
-  {
-    src: "/Awards/IFA.JPG",
-    org: "IFA — Indian Real Estate Awards",
-    title: "Outstanding Contribution to Luxury Housing",
-    year: "2023",
-    note: "Honoured at the Indian Real Estate Awards for the Royal Mansions community.",
-  },
-  {
-    src: "/Awards/Award.JPG",
-    org: "Sitraaj",
-    title: "Most Trusted Developer — Gujarat",
-    year: "2022",
-    note: "Sitraaj recognises Vedant Infra for transparency, on-time delivery and craft.",
-  },
-  {
-    src: "/Awards/Awards-2.jpg",
-    org: "Sitraaj",
-    title: "Lifetime Excellence — Darpan Patel",
-    year: "2022",
-    note: "A lifetime honour to the founder for two decades of considered building.",
-  },
-  {
-    src: "/Awards/Time-2 (4).jpg",
-    org: "The Times of India",
-    title: "Iconic Brands of India",
-    year: "2022",
-    note: "Vedant Infra named among the iconic homegrown brands of India.",
-  },
-];
 
 interface Props {
   /** "light" — for white/cream sections. "dark" — for noir sections. "split" — for editorial side layout. */
@@ -299,7 +248,7 @@ export default function OwnerSection({ variant = "light", showFullBio = true }: 
           </div>
 
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
-            {FOUNDER_AWARDS.slice(0, 4).map((a, i) => (
+            {FOUNDER_AWARDS.slice(0, 2).map((a, i) => (
               <Reveal key={a.src} delay={i * 90} direction="up">
                 <button
                   onClick={() => setOpenIndex(i)}
@@ -356,52 +305,7 @@ export default function OwnerSection({ variant = "light", showFullBio = true }: 
           </div>
         </div>
 
-        {/* SECONDARY AWARDS — horizontal cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {FOUNDER_AWARDS.slice(4).map((a, i) => {
-            const idx = i + 4;
-            return (
-              <Reveal key={a.src} delay={i * 90} direction="up" className="">
-                <button
-                  onClick={() => setOpenIndex(idx)}
-                  className={[
-                    "group relative w-full text-left overflow-hidden block transition-all duration-500 hover:-translate-y-1 rounded-xl",
-                    dark
-                      ? "bg-white/[0.03] border border-white/10 hover:border-gold/50"
-                      : "bg-bg-elev border border-gold/15 hover:border-gold/45",
-                  ].join(" ")}
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={a.src}
-                      alt={`${a.org} — ${a.title}`}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, 90vw"
-                      className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-90" />
-                    <div className="absolute top-3 right-3 bg-gold text-[#0a0805] text-[10px] tracking-[0.2em] uppercase px-2.5 py-1">
-                      {a.year}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <div className="text-[10px] tracking-[0.22em] uppercase text-gold mb-2">
-                      {a.org}
-                    </div>
-                    <div
-                      className={[
-                        "font-serif text-lg leading-snug group-hover:text-gold transition-colors",
-                        dark ? "text-white" : "text-ink-primary",
-                      ].join(" ")}
-                    >
-                      {a.title}
-                    </div>
-                  </div>
-                </button>
-              </Reveal>
-            );
-          })}
-        </div>
+
 
         {/* CTA */}
         <Reveal delay={200}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Reveal from "@/components/motion/Reveal";
 
 interface Testimonial {
   name: string;
@@ -9,45 +9,33 @@ interface Testimonial {
 }
 
 export default function TestimonialCarousel({ items }: { items: Testimonial[] }) {
-  const [i, setI] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % items.length), 6500);
-    return () => clearInterval(t);
-  }, [items.length]);
-
-  const cur = items[i];
-
   return (
-    <div>
-      <svg width="44" height="34" viewBox="0 0 34 26" fill="none" className="text-gold mb-10 mx-auto">
-        <path d="M0 26V13.2C0 9 0.9 5.6 2.7 3.1C4.6 0.6 7.3 -0.6 10.7 0L11.6 3.4C9.9 3.6 8.6 4.2 7.7 5.2C6.9 6.2 6.4 7.7 6.4 9.6H12V26H0ZM22 26V13.2C22 9 22.9 5.6 24.7 3.1C26.6 0.6 29.3 -0.6 32.7 0L33.6 3.4C31.9 3.6 30.6 4.2 29.7 5.2C28.9 6.2 28.4 7.7 28.4 9.6H34V26H22Z" fill="currentColor"/>
-      </svg>
-
-      <div className="relative min-h-[200px]">
-        <blockquote
-          key={i}
-          className="font-serif text-2xl md:text-3xl lg:text-4xl leading-[1.3] text-center text-ink-primary max-w-4xl mx-auto anim-fade-up"
-        >
-          "{cur.quote}"
-        </blockquote>
-        <div className="mt-10 text-center anim-fade-up" style={{ animationDelay: "200ms" }} key={`meta-${i}`}>
-          <div className="text-ink-primary text-lg">{cur.name}</div>
-          <div className="eyebrow mt-2">Resident · {cur.residence}</div>
-        </div>
-      </div>
-
-      <div className="mt-14 flex items-center justify-center gap-3">
-        {items.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setI(idx)}
-            aria-label={`Testimonial ${idx + 1}`}
-            className="h-[2px] transition-all duration-500 bg-ink-primary/20 hover:bg-gold"
-            style={{ width: idx === i ? 40 : 16, backgroundColor: idx === i ? "#db9d23" : undefined }}
-          />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {items.map((cur, i) => (
+        <Reveal key={i} delay={i * 100} direction="up" className="bg-bg-elev border border-gold/15 p-8 md:p-10 rounded-2xl flex flex-col justify-between shadow-sm">
+          <div>
+            <div className="flex gap-1.5 mb-6 text-gold">
+              {[...Array(5)].map((_, idx) => (
+                <svg key={idx} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+              ))}
+            </div>
+            <blockquote className="font-serif text-xl md:text-2xl leading-[1.4] text-ink-primary mb-8">
+              "{cur.quote}"
+            </blockquote>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold font-serif text-xl shrink-0">
+              {cur.name.charAt(0)}
+            </div>
+            <div>
+              <div className="text-ink-primary font-medium">{cur.name}</div>
+              <div className="text-sm text-ink-secondary mt-0.5">Resident · {cur.residence}</div>
+            </div>
+          </div>
+        </Reveal>
+      ))}
     </div>
   );
 }

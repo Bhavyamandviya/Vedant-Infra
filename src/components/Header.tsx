@@ -38,12 +38,12 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       <div className="container flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={solid ? "/logos_src/logo-2.png" : "/logos_src/logo-2.png"}
+            src={solid ? "/logos_src/Background.svg" : "/logos_src/Background.svg"}
             alt="Vedant Infra"
             width={140}
             height={20}
             priority
-            style={{height:"70px",width:"auto"}}
+            style={{ height: "70px", width: "auto" }}
           />
         </Link>
 
@@ -54,7 +54,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               href={item.href}
               className={[
                 "text-[0.78rem] tracking-[0.18em] uppercase transition-colors",
-                solid ? "text-ink-primary hover:text-gold" : "text-ink-primary hover:text-gold"
+                solid ? "text-ink-primary hover:text-gold" : "text-white hover:text-gold"
               ].join(" ")}
             >
               {item.label}

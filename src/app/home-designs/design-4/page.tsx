@@ -155,7 +155,7 @@ export default function HomeDesignFour() {
               </Reveal>
               <Reveal delay={80}>
                 <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.02] max-w-2xl">
-                  Six frames.{" "}
+                  Five frames.{" "}
                   <em className="not-italic text-shine">One language.</em>
                 </h2>
               </Reveal>
@@ -199,7 +199,7 @@ export default function HomeDesignFour() {
                   alt=""
                   fill
                   sizes="40px"
-                  className="object-contain invert brightness-110"
+                  className="object-contain"
                 />
               </div>
               <div>

@@ -80,3 +80,55 @@ export const TROPHIES = [
   "/trophies/tophy11.jpg",
   "/trophies/tophy12.jpg"
 ];
+
+export const FOUNDER_AWARDS = [
+  {
+    src: "/Awards/Time-2 (1).jpg",
+    org: "The Times of India",
+    title: "Real Estate Icon — Vadodara",
+    year: "2024",
+    note: "Recognised by The Times Group for sustained excellence in residential development.",
+  },
+  {
+    src: "/Awards/Time-2 (2).jpg",
+    org: "The Times of India",
+    title: "Editor's Choice Honour",
+    year: "2024",
+    note: "Featured by The Times Group for craft, integrity and architectural restraint.",
+  },
+  {
+    src: "/Awards/Time-2 (3).jpg",
+    org: "The Times of India",
+    title: "Builder of the Year — Western India",
+    year: "2023",
+    note: "Awarded for pioneering bungalow communities across Vadodara.",
+  },
+  {
+    src: "/Awards/IFA.JPG",
+    org: "IFA — Indian Real Estate Awards",
+    title: "Outstanding Contribution to Luxury Housing",
+    year: "2023",
+    note: "Honoured at the Indian Real Estate Awards for the Royal Mansions community.",
+  },
+  {
+    src: "/Awards/Award.JPG",
+    org: "Sitraaj",
+    title: "Most Trusted Developer — Gujarat",
+    year: "2022",
+    note: "Sitraaj recognises Vedant Infra for transparency, on-time delivery and craft.",
+  },
+  {
+    src: "/Awards/Awards-2.jpg",
+    org: "Sitraaj",
+    title: "Lifetime Excellence — Darpan Patel",
+    year: "2022",
+    note: "A lifetime honour to the founder for two decades of considered building.",
+  },
+  {
+    src: "/Awards/Time-2 (4).jpg",
+    org: "The Times of India",
+    title: "Iconic Brands of India",
+    year: "2022",
+    note: "Vedant Infra named among the iconic homegrown brands of India.",
+  },
+];
