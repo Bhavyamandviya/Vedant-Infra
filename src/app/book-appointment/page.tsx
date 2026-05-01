@@ -36,17 +36,7 @@ export default async function BookAppointmentPage({
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-10 bg-bg-elev">
               <Image src="/uploads/royal_mansions/grand_entry.jpg" alt="Vedant Infra" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
-            <div className="eyebrow mb-4">Studio</div>
-            <div className="text-ink-primary text-lg mb-2">Vedant Infra</div>
-            <div className="text-sm text-ink-secondary leading-relaxed mb-8">
-              Kalali, Vadodara, Gujarat<br />
-              India
-            </div>
-            <div className="eyebrow mb-4">Relationship Desk</div>
-            <div className="text-sm text-ink-secondary leading-relaxed">
-              +91 00000 00000<br />
-              info@vedantinfra.com
-            </div>
+          
           </aside>
         </div>
       </section>
