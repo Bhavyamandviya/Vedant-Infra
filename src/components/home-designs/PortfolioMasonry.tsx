@@ -16,14 +16,14 @@ const ITEMS: Item[] = [
   { src: "/vedant/royalheritage/Building-Entrance.jpg", title: "Royal Heritage", category: "5BHK Bungalow", href: "/projects/royal-heritage-villa" },
   { src: "/vedant/royalpark/Home-Front-Page.jpg", title: "Park Royal", category: "4B2HK Bungalow", href: "/projects/park-royal" },
   { src: "/vedant/royalcrest/Cam_02.jpg", title: "Royal Crest", category: "4BHK Bungalow", href: "/projects/royal-crest" },
-  { src: "/vedant/ROYALGREENPARK/Entrance.jpg", title: "Royal Green Park", category: "Master-planned Community", href: "/projects" },
+  { src: "/vedant/ROYALGREENPARK/Front.jpg", title: "Royal Green Park", category: "Master-planned Community", href: "/projects/royal-green-park" },
 ];
 
 export default function PortfolioMasonry() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
       {ITEMS.map((it, i) => (
-        <Reveal key={it.src} delay={i * 90} direction="up" className={i === 4 ? "md:col-span-2 lg:col-span-1" : ""}>
+        <Reveal key={it.src} delay={i * 90} direction="up">
           <Link
             href={it.href}
             className="relative group block w-full aspect-[16/10] overflow-hidden rounded-2xl"

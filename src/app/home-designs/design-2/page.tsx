@@ -119,13 +119,13 @@ export default async function HomeDesignTwo() {
           {/* Triple image row, staggered */}
           <div className="grid grid-cols-12 gap-4 md:gap-6">
             <Reveal direction="up" className="col-span-12 md:col-span-5">
-              <Parallax speed={0.06} className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+              <Parallax speed={0.06} className="relative aspect-[16/10] overflow-hidden rounded-2xl">
                 <Image
                   src="/vedant/royalmanison/Side-night.jpg"
                   alt="Royal Mansions at night"
                   fill
                   sizes="40vw"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </Parallax>
             </Reveal>
@@ -136,29 +136,29 @@ export default async function HomeDesignTwo() {
                   alt="Royal Heritage community"
                   fill
                   sizes="55vw"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </Parallax>
             </Reveal>
             <Reveal direction="up" delay={300} className="col-span-12 md:col-span-7">
-              <Parallax speed={0.05} className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+              <Parallax speed={0.05} className="relative aspect-[16/10] overflow-hidden rounded-2xl">
                 <Image
-                  src="/vedant/ROYALGREENPARK/Top-view.jpg"
-                  alt="Royal Green Park aerial"
+                  src="/vedant/ROYALGREENPARK/Balcony.jpg"
+                  alt="Royal Green Park balcony"
                   fill
                   sizes="55vw"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </Parallax>
             </Reveal>
             <Reveal direction="up" delay={450} className="col-span-12 md:col-span-5">
-              <Parallax speed={-0.05} className="relative aspect-[4/5] overflow-hidden rounded-2xl mt-0 md:-mt-12">
+              <Parallax speed={-0.05} className="relative aspect-[16/10] overflow-hidden rounded-2xl mt-0 md:-mt-12">
                 <Image
-                  src="/vedant/royalcrest/Top-View.jpg"
-                  alt="Royal Crest"
+                  src="/vedant/royalcrest/Balcony.jpg"
+                  alt="Royal Crest balcony"
                   fill
                   sizes="40vw"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </Parallax>
             </Reveal>
@@ -196,7 +196,7 @@ export default async function HomeDesignTwo() {
             >
               <div
                 className={[
-                  "lg:col-span-7 relative min-h-[420px] lg:min-h-[640px] overflow-hidden order-1",
+                  "lg:col-span-6 relative min-h-[360px] lg:min-h-[520px] overflow-hidden order-1",
                   reverse ? "lg:order-2" : "lg:order-1",
                 ].join(" ")}
               >
@@ -205,15 +205,15 @@ export default async function HomeDesignTwo() {
                     src={p.image}
                     alt={p.title}
                     fill
-                    sizes="60vw"
-                    className="object-contain transition-transform duration-[2000ms] ease-out hover:scale-[1.04]"
+                    sizes="50vw"
+                    className="object-cover transition-transform duration-[2000ms] ease-out hover:scale-[1.04]"
                   />
                 </Parallax>
               </div>
 
               <div
                 className={[
-                  "lg:col-span-5 flex items-center px-8 md:px-14 py-16 lg:py-24 order-2",
+                  "lg:col-span-6 flex items-center px-8 md:px-14 py-16 lg:py-24 order-2",
                   reverse ? "lg:order-1" : "lg:order-2",
                 ].join(" ")}
               >

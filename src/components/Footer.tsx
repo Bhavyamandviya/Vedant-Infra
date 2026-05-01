@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="bg-[#0e0c0a] text-white">
       <div className="container py-20 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <Image src="/logos_src/vedant_white_logo.png" alt="Vedant Infra" width={170} height={50} />
+          <Image src="/logos_src/Background-gold.svg" alt="Vedant Infra" width={170} height={50} />
           <p className="text-white/75 text-sm leading-relaxed max-w-sm">
             Crafting considered homes and landmark communities in Vadodara for
             families that value quiet excellence.

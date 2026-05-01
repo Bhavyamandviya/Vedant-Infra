@@ -31,14 +31,14 @@ const CHAPTERS: {
     eyebrow: "The Idea",
     title: "Build for the generation that follows.",
     body: "Vedant Infra is a small studio with a single conviction — that genuine craft, restraint and patience matter more than scale. Every column, every grain of stone, every curve of an arch is a quiet promise to the family that will call it home.",
-    image: "/vedant/HomePage/1.jpg",
+    image: "/videos/Vedant-infra-promotion.mp4",
   },
   {
     no: "II",
     eyebrow: "The Work · Royal Mansions",
     title: "Five-bedroom villas drawn around private courts.",
     body: "Our flagship community — composed for light, air and the rituals of large families. Roman-inspired pillars, deep-set verandas and gardens that arrive at every door.",
-    image: "/vedant/royalmanison/Front.jpg",
+    image: "/vedant/royalmanison/Society.jpg",
     href: "/projects/royal-mansions",
   },
   {
@@ -46,7 +46,7 @@ const CHAPTERS: {
     eyebrow: "The Work · Royal Heritage",
     title: "A heritage in the making.",
     body: "Bungalows arranged around a green axis — a community designed to mature gracefully, where every elevation rewards a second look.",
-    image: "/vedant/royalheritage/Top-View.jpg",
+    image: "/vedant/royalheritage/Society.jpg",
     href: "/projects/royal-heritage-villa",
   },
   {
@@ -54,7 +54,7 @@ const CHAPTERS: {
     eyebrow: "The Work · Park Royal",
     title: "Generous in plan, restrained in elevation.",
     body: "Four-and-a-half bedroom bungalows for families who value quiet excellence — open layouts, daylight at every hour, finishes that age beautifully.",
-    image: "/vedant/royalpark/Project-Front.jpg",
+    image: "/vedant/royalpark/Society.jpg",
     href: "/projects/park-royal",
   },
   {
@@ -62,8 +62,16 @@ const CHAPTERS: {
     eyebrow: "The Work · Royal Crest",
     title: "A boutique address built for everyday calm.",
     body: "A small collection of four-bedroom bungalows on a quiet road — disciplined, well-built, gently scaled.",
-    image: "/vedant/royalcrest/Banner.jpg",
+    image: "/vedant/royalcrest/Society.jpg",
     href: "/projects/royal-crest",
+  },
+  {
+    no: "VI",
+    eyebrow: "The Work · Royal Green Park",
+    title: "Green living at the heart of the city.",
+    body: "A master-planned community designed around the rhythm of nature — spacious layouts, lush landscaping, and homes built for families who want sustainability without compromise.",
+    image: "/vedant/ROYALGREENPARK/Society.jpg",
+    href: "/projects/royal-green-park",
   },
 ];
 
@@ -106,33 +114,42 @@ export default async function HomeDesignThree() {
                 i % 2 === 1 ? "bg-bg-elev" : "bg-bg",
               ].join(" ")}
             >
-              <div className="container py-24 md:py-36">
+              <div className="container py-20 md:py-28">
                 <div
                   className={[
                     "grid lg:grid-cols-12 gap-10 lg:gap-16 items-center",
                   ].join(" ")}
                 >
-                  {/* Image */}
+                  {/* Image or Video */}
                   <div
                     className={[
-                      "lg:col-span-7 order-1",
+                      "lg:col-span-6 order-1",
                       reverse ? "lg:order-2" : "lg:order-1",
                     ].join(" ")}
                   >
                     <Reveal direction="scale">
                       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lift-on-hover">
-                        <Parallax speed={0.05}>
-                          <Image
+                        {c.image.endsWith('.mp4') || c.image.endsWith('.webm') ? (
+                          <video
                             src={c.image}
-                            alt={c.title}
-                            fill
-                            sizes="60vw"
-                            className="object-cover"
+                            controls
+                            autoPlay
+                            muted
+                            loop
+                            className="w-full h-full object-contain"
                           />
-                        </Parallax>
-                        <div className="absolute top-5 left-5 bg-bg-elev/95 backdrop-blur border border-gold/30 px-3 py-1.5 text-[10px] tracking-[0.22em] uppercase text-gold">
-                          Chapter {c.no}
-                        </div>
+                        ) : (
+                          <Parallax speed={0.05}>
+                            <Image
+                              src={c.image}
+                              alt={c.title}
+                              fill
+                              sizes="60vw"
+                              className="object-cover"
+                            />
+                          </Parallax>
+                        )}
+                       
                       </div>
                     </Reveal>
                   </div>
@@ -140,7 +157,7 @@ export default async function HomeDesignThree() {
                   {/* Text */}
                   <div
                     className={[
-                      "lg:col-span-5 order-2",
+                      "lg:col-span-6 order-2",
                       reverse ? "lg:order-1" : "lg:order-2",
                     ].join(" ")}
                   >

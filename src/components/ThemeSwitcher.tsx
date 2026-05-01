@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
  * Selection is persisted in localStorage so it survives reloads.
  */
 // Default is "forest" (no data-theme attribute set on <html>).
-type ThemeId = "forest" | "forest-white" | "navy-white" | "marble";
+type ThemeId = "forest" | "marble";
 
 interface Theme {
   id: ThemeId;
@@ -34,24 +34,6 @@ const THEMES: Theme[] = [
     accent: "#c8a249",
     accentSoft: "#e0c47e",
     text: "#f1ead4",
-  },
-  {
-    id: "forest-white",
-    name: "Forest White",
-    subtitle: "Deep Forest + Cream + Gold",
-    bg: "#1d3327",
-    accent: "#d4ad55",
-    accentSoft: "#f5efdc",
-    text: "#f5efdc",
-  },
-  {
-    id: "navy-white",
-    name: "Navy White",
-    subtitle: "Deep Navy + Ivory + Brass",
-    bg: "#142340",
-    accent: "#d4af6f",
-    accentSoft: "#f0eee5",
-    text: "#ede5d3",
   },
   {
     id: "marble",

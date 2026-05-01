@@ -24,7 +24,7 @@ const STATS = [
 
 export default async function HomeDesignOne() {
   const all = await listProjects();
-  const featured = all.slice(0, 3);
+  const featured = all;
   const spotlight = all.find((p) => p.slug === "royal-mansions") ?? all[0];
 
   return (
@@ -61,13 +61,13 @@ export default async function HomeDesignOne() {
           <div className="lg:col-span-5">
             <div className="grid grid-cols-2 gap-4">
               <Reveal direction="up" delay={0}>
-                <Parallax speed={0.12} className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-                  <Image src="/vedant/royalmanison/Front-morning.jpg" alt="Royal Mansions" fill sizes="20vw" className="object-cover" />
+                <Parallax speed={0.12} className="relative aspect-[10/16] overflow-hidden rounded-2xl">
+                  <Image src="/vedant/royalmanison/Balcony.jpg" alt="Royal Mansions" fill sizes="20vw" className="object-cover" />
                 </Parallax>
               </Reveal>
               <Reveal direction="up" delay={200}>
-                <Parallax speed={-0.1} className="relative aspect-[4/5] overflow-hidden rounded-2xl mt-10">
-                  <Image src="/vedant/royalheritage/Building-Entrance.jpg" alt="Royal Heritage" fill sizes="20vw" className="object-cover" />
+                <Parallax speed={-0.1} className="relative aspect-[10/16] overflow-hidden rounded-2xl mt-10">
+                  <Image src="/vedant/royalheritage/Balcony.jpg" alt="Royal Heritage" fill sizes="20vw" className="object-cover" />
                 </Parallax>
               </Reveal>
             </div>
@@ -182,6 +182,7 @@ export default async function HomeDesignOne() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
             {featured.map((p, i) => (
+              
               <Reveal key={p.slug} delay={i * 120} direction="up">
                 <ProjectCard project={p} />
               </Reveal>
@@ -197,10 +198,10 @@ export default async function HomeDesignOne() {
             <div className="lg:col-span-7 relative min-h-[440px] lg:min-h-[720px] overflow-hidden">
               <div className="absolute inset-0 kenburns" style={{ animationDuration: "20s" }}>
                 <Image
-                  src="/vedant/royalmanison/Front.jpg"
+                  src="/vedant/royalmanison/Balcony.jpg"
                   alt={spotlight.name}
                   fill
-                  sizes="60vw"
+                  sizes="50vw"
                   className="object-cover"
                 />
               </div>

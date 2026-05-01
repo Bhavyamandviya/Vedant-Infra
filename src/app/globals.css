@@ -23,46 +23,6 @@
   --c-on-photo-soft: #c9c0a8;
 }
 
-/* Forest White — deep forest green PAGE + cream/ivory raised cards
-   + bright gold accents. Cream surfaces alternate with the dark
-   forest page so both colours are visually present (~50/50 across
-   the site). */
-[data-theme="forest-white"] {
-  color-scheme: dark;
-  --c-bg: #1d3327;
-  /* deep forest green page */
-  --c-bg-elev: #f5efdc;
-  /* cream raised cards (high contrast pop) */
-  --c-bg-line: #2a4a3a;
-  --c-accent: #d4ad55;
-  /* rich gold */
-  --c-accent-soft: #e8c878;
-  --c-text: #f5efdc;
-  /* cream text — readable on dark page */
-  --c-text-secondary: #c0b89a;
-  --c-text-muted: #8a8268;
-  /* Override text colour ONLY when inside a cream elev surface */
-  /* --c-text-on-elev: #1a2820; */
-}
-
-/* Navy White — deep navy PAGE + ivory cards + brass accents */
-[data-theme="navy-white"] {
-  color-scheme: dark;
-  --c-bg: #142340;
-  /* deep midnight navy page */
-  --c-bg-elev: #f0eee5;
-  /* ivory raised cards */
-  --c-bg-line: #1f3258;
-  --c-accent: #d4af6f;
-  /* antique brass / champagne */
-  --c-accent-soft: #ecd5a5;
-  --c-text: #ede5d3;
-  /* warm cream — readable on navy */
-  --c-text-secondary: #b8b09a;
-  --c-text-muted: #7c7a78;
-  --c-text-on-elev: #0f1a30;
-}
-
 /* Pearl Marble — warm marble surfaces, antique brass accents (LIGHT) */
 [data-theme="marble"] {
   color-scheme: light;
@@ -617,7 +577,8 @@ details[open]>summary>.faq-icon {
   padding: 0.45rem 0.9rem;
   background: color-mix(in srgb, var(--c-accent) 12%, transparent);
   border: 1px solid color-mix(in srgb, var(--c-accent) 45%, transparent);
-  color: var(--c-accent-soft);
+  /* color: var(--c-accent-soft); */
+  color:#fff;
   font-size: 0.65rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;

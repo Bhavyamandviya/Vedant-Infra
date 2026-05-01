@@ -31,7 +31,7 @@ export default function IntroLoader() {
   return (
     <div className="intro-overlay fixed inset-0 z-[200] bg-[#0e0e0e] flex flex-col items-center justify-center">
       <div className="relative w-[160px] h-[46px] mb-8 opacity-0 anim-fade-up" style={{ animationDelay: "300ms" }}>
-        <Image src="/logos_src/vedant_white_logo.png" alt="Vedant Infra" fill sizes="160px" className="object-contain" priority />
+        <Image src="/logos_src/Background-gold.svg" alt="Vedant Infra" fill sizes="160px" className="object-contain" priority />
       </div>
       <div className="relative w-[240px] h-[1px] bg-white/15 overflow-hidden">
         <div className="intro-bar absolute inset-0 bg-gold" />

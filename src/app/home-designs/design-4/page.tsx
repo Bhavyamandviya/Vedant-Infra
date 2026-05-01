@@ -172,7 +172,7 @@ export default function HomeDesignFour() {
       </section>
 
       {/* ========= AMENITIES STRIP — marquee ========= */}
-      <section className="bg-[#0e0c0a] text-white py-20 border-y border-white/5">
+      <section className="bg-[#0e0c0a] px-28 text-white py-20 border-y border-white/5">
         <div className="container mb-10">
           <Reveal>
             <div className="text-[10px] tracking-[0.32em] uppercase text-gold mb-5">
