@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import FirstVisitPopup from "@/components/FirstVisitPopup";
+import FloatingSocials from "@/components/FloatingSocials";
 import IntroLoader from "@/components/IntroLoader";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
@@ -33,6 +35,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-bg text-ink-primary">
         <IntroLoader />
+        <FloatingSocials />
+        <ScrollIndicator />
         {children}
         <Footer />
         <FirstVisitPopup />

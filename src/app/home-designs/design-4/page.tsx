@@ -180,7 +180,7 @@ export default function HomeDesignFour() {
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04] max-w-3xl">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04] max-w-3xl text-white">
               Six things every Vedant residence has{" "}
               <em className="not-italic text-shine">in common.</em>
             </h2>

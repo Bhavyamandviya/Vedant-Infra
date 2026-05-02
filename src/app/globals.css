@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar while keeping scroll functionality */
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   color-scheme: dark;
 
