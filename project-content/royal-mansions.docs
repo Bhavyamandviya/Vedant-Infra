@@ -58,13 +58,17 @@
     { "icon": "/amenities_icons/flooring.png", "label": "Italian Flooring" }
   ],
   "gallery": [
-    "/uploads/royal_mansions/banner.png",
-    "/uploads/royal_mansions/slider_2.png",
-    "/uploads/royal_mansions/club_house.jpg",
-    "/uploads/royal_mansions/grand_entry.jpg",
-    "/uploads/royal_mansions/morden_amenties.jpg",
-    "/uploads/royal_mansions/swimming_pool.jpg",
-    "/uploads/royal_mansions/top-view.jpg"
+    "/vedant/royalmanison/House.jpg",
+    "/vedant/royalmanison/House-morninh.jpg",
+    "/vedant/royalmanison/Front.jpg",
+    "/vedant/royalmanison/Front-morning.jpg",
+    "/vedant/royalmanison/Side-view.jpg",
+    "/vedant/royalmanison/Side-left.jpg",
+    "/vedant/royalmanison/Side-night.jpg",
+    "/vedant/royalmanison/Balcony.jpg",
+    "/vedant/royalmanison/Balcony-right.jpg",
+    "/vedant/royalmanison/Society.jpg",
+    "/vedant/royalmanison/Terrace.jpg"
   ],
   "faqs": [
     { "q": "What is the villa configuration?", "a": "Royal Mansions offers 5BHK ultra-luxury villas with multiple orientations and extended garden options." },

@@ -9,15 +9,15 @@
   "type": "Villa",
   "status": "completed",
   "bookingAvailable": true,
-  "hero": "/vedant/royalpark/Project-front.jpg",
+  "hero": "/vedant/royalpark/Colony-Entrance.jpg",
   "thumbnail": "/vedant/royalpark/Entrance.jpg",
   "summary": "Park Royal is a prestigious residential community offering 4BHK villas with exceptional architectural design and world-class amenities. Each villa is thoughtfully planned to provide maximum comfort and spaciousness with ample green spaces throughout the community.",
   "description": "Set in the heart of Kalali, Park Royal reflects the quiet language of modern luxury. Meticulously crafted residences, landscaped avenues and a calm, considered aesthetic combine to create a home that feels both private and expansive. The project emphasizes privacy, spaciousness and an enduring community lifestyle.",
   "brochure": "/brochures/park_royal.pdf",
   "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
   "overview": {
-    "topView": "/uploads/park_royal/top-view-with-number.jpg",
-    "elevation": "/uploads/park_royal/front.jpg",
+    "topView": "/vedant/royalpark/Home-Front-Page.jpg",
+    "elevation": "/vedant/royalpark/Home-Front-View-2.jpg",
     "layouts": [
       { "src": "/uploads/park_royal/plan/layout.png", "label": "Master Layout" },
       { "src": "/uploads/park_royal/plan/1.png", "label": "Plot 1" },
@@ -55,14 +55,15 @@
     { "icon": "/amenities_icons/structure.png", "label": "Earthquake Resistant Structure" }
   ],
   "gallery": [
-    "/uploads/park_royal/MAIN1.jpg",
-    "/uploads/park_royal/main2.jpg",
-    "/uploads/park_royal/entrance.jpg",
-    "/uploads/park_royal/front.jpg",
-    "/uploads/park_royal/club.jpg",
-    "/uploads/park_royal/swimming.jpg",
-    "/uploads/park_royal/slider_1.jpg",
-    "/uploads/park_royal/slider_2.jpg"
+    "/vedant/royalpark/Home-Front-Page.jpg",
+    "/vedant/royalpark/Home-Front-View-2.jpg",
+    "/vedant/royalpark/Entrance.jpg",
+    "/vedant/royalpark/Colony-Entrance.jpg",
+    "/vedant/royalpark/Project-Front.jpg",
+    "/vedant/royalpark/Society.jpg",
+    "/vedant/royalpark/Swimming.jpg",
+    "/vedant/royalpark/KEY.jpg",
+    "/vedant/royalpark/Top-view.jpg"
   ],
   "faqs": [
     { "q": "What is the villa configuration?", "a": "Park Royal offers 4BHK + 2 Utility Rooms luxury villas with private gardens and gazebo terraces." },

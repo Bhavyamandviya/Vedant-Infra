@@ -9,15 +9,15 @@
   "type": "Bungalow",
   "status": "completed",
   "bookingAvailable": true,
-  "hero": "/vedant/royalcrest/Banner.jpg",
+  "hero": "/vedant/royalcrest/Home-Banner-Royal-Crest.jpg",
   "thumbnail": "/vedant/royalcrest/Club-Gate.jpg",
   "summary": "Lavish royal residences welcome your arrival at Royal Crest. Here, find the tiniest details carved to perfection, with landscaped promenades and grand foyers that your family will fall in love with.",
   "description": "Royalty demands room for your passion — which is taken care of here at Royal Crest. Enormous residences with ample space to flaunt your fleet of vehicles and an impressive foyer is the first thing your family will fall in love with. Every corner is considered; every finish is deliberate.",
   "brochure": "/brochures/royal_crest.pdf",
   "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
   "overview": {
-    "topView": "/uploads/royal_crest/top-view-with-number.jpg",
-    "elevation": "/uploads/royal_crest/main2.jpg",
+    "topView": "/vedant/royalcrest/Hall.jpg",
+    "elevation": "/vedant/royalcrest/Master-BedRoom.jpg",
     "layouts": [
       { "src": "/uploads/royal_crest/KEY.jpg", "label": "Key Plan" },
       { "src": "/uploads/royal_crest/sqft.png", "label": "Unit Area" },
@@ -49,14 +49,19 @@
     { "icon": "/amenities_icons/flooring.png", "label": "Italian Tile Flooring" }
   ],
   "gallery": [
-    "/uploads/royal_crest/MAIN1.jpg",
-    "/uploads/royal_crest/main2.jpg",
-    "/uploads/royal_crest/entrance.jpg",
-    "/uploads/royal_crest/club.jpg",
-    "/uploads/royal_crest/gazebo.jpg",
-    "/uploads/royal_crest/sky.jpg",
-    "/uploads/royal_crest/slider_1.jpg",
-    "/uploads/royal_crest/slider_2.jpg"
+    "/vedant/royalcrest/Home-Banner-Royal-Crest.jpg",
+    "/vedant/royalcrest/Project-Name-Banner.jpg",
+    "/vedant/royalcrest/Side_View.jpg",
+    "/vedant/royalcrest/Society.jpg",
+    "/vedant/royalcrest/Society-Entrance.jpg",
+    "/vedant/royalcrest/Club-Gate.jpg",
+    "/vedant/royalcrest/Top-View.jpg",
+    "/vedant/royalcrest/Terrace.jpg",
+    "/vedant/royalcrest/KEY.jpg",
+    "/vedant/royalcrest/Master-BedRoom.Jpg",
+    "/vedant/royalcrest/Hall.jpg",
+    "/vedant/royalcrest/Road-Side-View.jpg",
+    "/vedant/royalcrest/gazebo.jpg"
   ],
   "faqs": [
     { "q": "What is the villa configuration?", "a": "Royal Crest offers 4BHK luxurious bungalows across 30 carefully planned plots." },

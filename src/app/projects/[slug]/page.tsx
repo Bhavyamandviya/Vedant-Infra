@@ -228,11 +228,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           )}
         </div>
 
-        {/* Project amenities — infinite marquee */}
+        {/* Project amenities — infinite marquee, no pause on hover */}
         {project.projectAmenities.length > 0 && (
-          <div className="relative pb-20 -mt-20">
+          <div className="relative pb-20 px-28 md:px-36 -mt-20">
             <Marquee
               speed={45}
+              pauseOnHover={false}
               items={project.projectAmenities.map((a) => (
                 <div
                   key={a.label}
@@ -269,12 +270,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
         )}
 
-        {/* Residence amenities — infinite marquee, opposite direction */}
+        {/* Residence amenities — infinite marquee, opposite direction, no pause on hover */}
         {project.villaAmenities.length > 0 && (
-          <div className="relative pb-28 md:pb-36 mt-2">
+          <div className="relative pb-28 md:pb-36 mt-2 px-28 md:px-36">
             <Marquee
               speed={55}
               reverse
+              pauseOnHover={false}
               items={project.villaAmenities.map((a) => (
                 <div
                   key={a.label}
@@ -301,20 +303,24 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         )}
       </section>
 
-      {/* F. GALLERY — editorial, defined */}
+      {/* F. GALLERY — editorial, cinematic */}
       {project.gallery.length > 0 && (
         <section className="bg-bg-elev relative overflow-hidden">
+          {/* Dual ambient glows for depth */}
           <div
             aria-hidden
-            className="pointer-events-none absolute -top-32 -left-40 w-[36rem] h-[36rem] rounded-full"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(219,157,35,0.06) 0%, transparent 60%)",
-            }}
+            className="pointer-events-none absolute -top-32 -left-40 w-[48rem] h-[48rem] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(219,157,35,0.08) 0%, transparent 60%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-32 -right-40 w-[36rem] h-[36rem] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(219,157,35,0.05) 0%, transparent 60%)" }}
           />
 
           <div className="container py-28 md:py-36 relative">
-            <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-16 items-end">
+            {/* Header */}
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-20 items-end">
               <div className="lg:col-span-7">
                 <Reveal>
                   <div className="eyebrow mb-5 flex items-center gap-3">
@@ -337,25 +343,30 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </Reveal>
               </div>
 
+              {/* Stats — rounded, gold accent on count */}
               <Reveal delay={220} className="lg:col-span-5">
-                <div className="grid grid-cols-3 gap-px bg-gold/10 border border-gold/10">
-                  <div className="bg-bg-elev p-5 text-center">
-                    <div className="font-serif text-3xl text-ink-primary leading-none">
+                <div className="grid grid-cols-3 divide-x divide-gold/15 border border-gold/15 rounded-2xl overflow-hidden">
+                  <div className="bg-bg px-4 py-6 text-center">
+                    <div className="font-serif text-4xl text-gold leading-none tabular-nums">
                       {project.gallery.length}
                     </div>
                     <div className="eyebrow mt-2 !text-[9px]">Frames</div>
                   </div>
-                  <div className="bg-bg-elev p-5 text-center">
-                    <div className="font-serif text-3xl text-ink-primary leading-none">
+                  <div className="bg-bg px-4 py-6 text-center">
+                    <div className="font-serif text-4xl text-ink-primary leading-none">
                       4K
                     </div>
                     <div className="eyebrow mt-2 !text-[9px]">Resolution</div>
                   </div>
-                  <div className="bg-bg-elev p-5 text-center">
-                    <div className="font-serif text-3xl text-gold leading-none">
-                      ●
+                  <div className="bg-bg px-4 py-6 text-center">
+                    <div className="relative flex items-center justify-center">
+                      <span className="w-3 h-3 rounded-full bg-gold inline-block" />
+                      <span
+                        className="absolute w-3 h-3 rounded-full bg-gold inline-block animate-ping opacity-60"
+                        aria-hidden
+                      />
                     </div>
-                    <div className="eyebrow mt-2 !text-[9px]">Live Project</div>
+                    <div className="eyebrow mt-3 !text-[9px]">Live Project</div>
                   </div>
                 </div>
               </Reveal>

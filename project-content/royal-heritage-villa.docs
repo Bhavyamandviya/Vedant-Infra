@@ -9,15 +9,15 @@
   "type": "Villa",
   "status": "completed",
   "bookingAvailable": true,
-  "hero": "/vedant/royalheritage/Project-Entrance.jpg",
+  "hero": "/vedant/royalheritage/Side-View.jpg",
   "thumbnail": "/vedant/royalheritage/Balcony.jpg",
   "summary": "Inspired by French architecture, Royal Heritage Villa represents the epitome of royal luxury — villas crafted with meticulous attention to detail for the discerning few.",
   "description": "These villas are meant for a select few elite like-minded families that make this place more than just a township — they make it an extended family. A private club house, tennis courts, multipurpose halls and wellness spaces anchor a life of quiet privilege.",
   "brochure": "/brochures/royal_heritage_villa.pdf",
   "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
   "overview": {
-    "topView": "/uploads/royal_heritage_villa/sitemap.png",
-    "elevation": "/uploads/royal_heritage_villa/slider_2.png",
+    "topView": "/vedant/royalheritage/Balcony.jpg",
+    "elevation": "/vedant/royalheritage/Swimming.jpg",
     "layouts": [
       { "src": "/uploads/royal_heritage_villa/plan/top-view-with-number.jpg", "label": "Master Site Plan" },
       { "src": "/uploads/royal_heritage_villa/plan/01.png", "label": "Plot 01" },
@@ -60,14 +60,19 @@
     { "icon": "/amenities_icons/structure.png", "label": "RCC Structure" }
   ],
   "gallery": [
-    "/uploads/royal_heritage_villa/slider_1.png",
-    "/uploads/royal_heritage_villa/slider_2.png",
-    "/uploads/royal_heritage_villa/club_house.jpg",
-    "/uploads/royal_heritage_villa/multipurpose_hall.jpg",
-    "/uploads/royal_heritage_villa/swimming_pool.jpg",
-    "/uploads/royal_heritage_villa/tennis.jpg",
-    "/uploads/royal_heritage_villa/sky.jpg",
-    "/uploads/royal_heritage_villa/sitemap.png"
+    "/vedant/royalheritage/window.png",
+    "/vedant/royalheritage/Building.jpg",
+    "/vedant/royalheritage/Building-Entrance.jpg",
+    "/vedant/royalheritage/Swimming.jpg",
+    "/vedant/royalheritage/multipurpose_hall.jpg",
+    "/vedant/royalheritage/Project-Entrance.jpg",
+    "/vedant/royalheritage/Road-side.jpg",
+    "/vedant/royalheritage/Side-View.jpg",
+    "/vedant/royalheritage/Side-View-right.jpg",
+    "/vedant/royalheritage/Society.jpg",
+    "/vedant/royalheritage/Top-View.jpg",
+    "/vedant/royalheritage/Balcony.jpg",
+    "/vedant/royalheritage/sitemap.png"
   ],
   "faqs": [
     { "q": "What is the villa configuration?", "a": "Royal Heritage Villa offers 5BHK luxurious villas across 44 thoughtfully designed plot types." },

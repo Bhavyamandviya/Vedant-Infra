@@ -8,15 +8,15 @@
   "architect": "Ruchir Sheth",
   "type": "Residences",
   "status": "latest",
-  "hero": "/vedant/ROYALGREENPARK/Side-view.jpg",
+  "hero": "/vedant/ROYALGREENPARK/Entrance.jpg",
   "thumbnail": "/vedant/ROYALGREENPARK/Balcony.jpg",
   "summary": "A landmark completed community by Vedant Infrastructure — peaceful residences framed by mature landscaping and a well-resolved amenity plan.",
   "description": "Royal Green Park is one of Vedant Infra's established communities, now fully occupied. The address is remembered for its mature landscaping, considered villa typologies and the close-knit neighbourhood it has become.",
   "brochure": "/uploads/park_royal/MAIN1.jpg",
   "coordinates": { "lat": 22.2640956, "lng": 73.1377952 },
   "overview": {
-    "topView": "/uploads/park_royal/top-view-with-number.jpg",
-    "elevation": "/uploads/park_royal/main2.jpg",
+    "topView": "/vedant/ROYALGREENPARK/Club.jpg",
+    "elevation": "/vedant/ROYALGREENPARK/Balcony.jpg",
     "layouts": [
       { "src": "/uploads/park_royal/plan/layout.png", "label": "Site Layout" }
     ]
@@ -36,10 +36,14 @@
     { "icon": "/amenities_icons/terrace.png", "label": "Open Terrace" }
   ],
   "gallery": [
-    "/uploads/park_royal/park_bg.png",
-    "/uploads/park_royal/MAIN1.jpg",
-    "/uploads/park_royal/front.jpg",
-    "/uploads/park_royal/entrance.jpg"
+    "/vedant/ROYALGREENPARK/Entrance.jpg",
+    "/vedant/ROYALGREENPARK/Club.jpg",
+    "/vedant/ROYALGREENPARK/Club-Front.jpg",
+    "/vedant/ROYALGREENPARK/Side-view.jpg",
+    "/vedant/ROYALGREENPARK/Side-right.jpg",
+    "/vedant/ROYALGREENPARK/Society.jpg",
+    "/vedant/ROYALGREENPARK/Top-view.jpg",
+    "/vedant/ROYALGREENPARK/Balcony.jpg"
   ],
   "faqs": [
     { "q": "Is this project available for purchase?", "a": "Royal Green Park is a completed and occupied community. Resale opportunities may be available — please contact us for current listings." },

@@ -5,12 +5,6 @@ import { useMemo, useState } from "react";
 import Reveal from "@/components/motion/Reveal";
 import Lightbox from "@/components/Lightbox";
 
-/**
- * Editorial gallery — categorised, captioned, with a hero feature image
- * and a masonry-style grid below. Designed for project detail pages where
- * each image deserves a story.
- */
-
 interface Props {
   images: string[];
   projectName: string;
@@ -49,7 +43,6 @@ export default function EnhancedGallery({ images, projectName }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>("All");
 
-  // Tag every image once
   const tagged = useMemo(
     () =>
       images.map((src, i) => ({
@@ -69,55 +62,49 @@ export default function EnhancedGallery({ images, projectName }: Props) {
 
   const filtered = useMemo(
     () =>
-      activeFilter === "All"
-        ? tagged
-        : tagged.filter((t) => t.category === activeFilter),
+      activeFilter === "All" ? tagged : tagged.filter((t) => t.category === activeFilter),
     [tagged, activeFilter]
   );
 
   if (images.length === 0) return null;
 
-  // Featured = first image
   const featured = tagged[0];
-  const rest = filtered.filter((t) => t.index !== featured.index);
+  const gridImages = filtered.filter((t) => t.index !== featured.index);
 
-  // Layout pattern: every 6th image becomes a full-bleed banner, every 3rd a tall
-  const sizeFor = (i: number): string => {
-    if (i % 7 === 0) return "md:col-span-2 md:row-span-2 aspect-[4/3]";
-    if (i % 5 === 0) return "md:col-span-2 aspect-[16/9]";
-    if (i % 3 === 0) return "md:row-span-2 aspect-[3/4]";
-    return "aspect-[4/3]";
+  // Clean bento pattern: repeating groups of 5
+  // [wide, tall, normal, normal, wide-short]
+  const getBentoClass = (i: number): string => {
+    const pos = i % 5;
+    if (pos === 0) return "col-span-2 row-span-2"; // big square
+    if (pos === 1) return "col-span-1 row-span-2"; // tall
+    if (pos === 2) return "col-span-1 row-span-1"; // normal
+    if (pos === 3) return "col-span-1 row-span-1"; // normal
+    if (pos === 4) return "col-span-2 row-span-1"; // wide
+    return "col-span-1 row-span-1";
   };
 
   return (
-    <div className="space-y-14">
-      {/* Filter chips */}
+    <div className="space-y-10">
+
+      {/* ── FILTER PILLS ── */}
       <Reveal>
-        <div className="flex flex-wrap items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2">
           {categories.map((c) => {
-            const count =
-              c === "All"
-                ? tagged.length
-                : tagged.filter((t) => t.category === c).length;
+            const count = c === "All" ? tagged.length : tagged.filter((t) => t.category === c).length;
             const active = c === activeFilter;
             return (
               <button
                 key={c}
                 onClick={() => setActiveFilter(c)}
                 className={[
-                  "group relative inline-flex items-center gap-2 px-4 py-2 text-[10px] tracking-[0.22em] uppercase transition-all duration-300 border",
+                  "inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] tracking-[0.2em] uppercase transition-all duration-300 border",
                   active
-                    ? "bg-ink-primary text-white border-ink-primary"
-                    : "bg-transparent text-ink-secondary border-black/15 hover:border-gold hover:text-ink-primary",
+                    ? "bg-gold text-white border-gold shadow-[0_0_20px_rgba(219,157,35,0.35)]"
+                    : "bg-transparent text-ink-secondary border-gold/20 hover:border-gold/60 hover:text-ink-primary",
                 ].join(" ")}
               >
-                <span>{c}</span>
-                <span
-                  className={[
-                    "text-[9px] tabular-nums",
-                    active ? "text-white/70" : "text-ink-muted",
-                  ].join(" ")}
-                >
+                {c}
+                <span className={["tabular-nums text-[9px]", active ? "text-white/70" : "text-ink-muted"].join(" ")}>
                   {String(count).padStart(2, "0")}
                 </span>
               </button>
@@ -126,122 +113,142 @@ export default function EnhancedGallery({ images, projectName }: Props) {
         </div>
       </Reveal>
 
-      {/* FEATURED HERO IMAGE */}
+      {/* ── HERO FEATURE ── */}
       {activeFilter === "All" && (
         <Reveal direction="scale">
           <button
             onClick={() => setOpenIndex(featured.index)}
-            className="group relative block w-full overflow-hidden lift-on-hover rounded-3xl"
+            className="group relative block w-full overflow-hidden rounded-2xl"
           >
-            <div className="relative aspect-[21/9] w-full overflow-hidden">
+            {/* 16:9 ratio — cinematic but not too squashed */}
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <Image
                 src={featured.src}
                 alt={`${projectName} — ${featured.name}`}
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]"
+                className="object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
-              {/* Bottom caption block */}
-              <div className="absolute bottom-0 left-0 right-0 p-7 md:p-12">
-                <div className="flex items-end justify-between gap-8 flex-wrap">
-                  <div>
-                    <div className="text-[10px] tracking-[0.28em] uppercase text-gold mb-3 flex items-center gap-3">
-                      <span className="gold-divider" /> Featured · {featured.category}
+              {/* Vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
+
+              {/* Gold corner accent */}
+              <div className="absolute top-6 right-6 w-16 h-16 border-t border-r border-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-6 left-6 w-16 h-16 border-b border-l border-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+              {/* Caption */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                <div className="flex items-end justify-between gap-8">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="inline-block w-6 h-px bg-gold" />
+                      <span className="text-[10px] tracking-[0.3em] uppercase text-gold">
+                        Featured · {featured.category}
+                      </span>
                     </div>
-                    <div className="font-serif text-3xl md:text-5xl text-white leading-[1.1] max-w-2xl">
+                    <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white leading-[1.15] max-w-2xl">
                       {featured.caption}
-                    </div>
-                    <div className="text-white/70 text-sm mt-3 tracking-wide">
-                      {featured.name}
-                    </div>
+                    </h3>
+                    <p className="mt-3 text-white/60 text-sm tracking-wide">{featured.name}</p>
                   </div>
-                  <div className="hidden md:flex items-center gap-3 text-white/85 text-[10px] tracking-[0.22em] uppercase translate-y-0 group-hover:-translate-y-1 transition-transform duration-500">
-                    <span>View Full Frame</span>
-                    <svg width="34" height="14" viewBox="0 0 34 14" fill="none">
-                      <path d="M0 7h32M27 2l5 5-5 5" stroke="currentColor" strokeWidth="1" />
+
+                  {/* CTA pill */}
+                  <div className="hidden md:flex shrink-0 items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 text-white text-[10px] tracking-[0.22em] uppercase group-hover:bg-gold/20 group-hover:border-gold/40 transition-all duration-500">
+                    View Frame
+                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M0 5h14M10 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                     </svg>
                   </div>
                 </div>
+              </div>
+
+              {/* Index badge */}
+              <div className="absolute top-6 left-6 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-white/70">
+                01 / {String(tagged.length).padStart(2, "0")}
               </div>
             </div>
           </button>
         </Reveal>
       )}
 
-      {/* MASONRY-STYLE GRID */}
+      {/* ── BENTO GRID ── */}
       <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5"
-        style={{ gridAutoRows: "min-content" }}
+        className="grid grid-cols-3 md:grid-cols-4 gap-3"
+        style={{ gridAutoRows: "220px" }}
       >
-        {(activeFilter === "All" ? rest : filtered).map((t, i) => (
+        {(activeFilter === "All" ? gridImages : filtered).map((t, i) => (
           <Reveal
-            key={`${t.src}-${activeFilter}`}
-            delay={Math.min(i * 60, 600)}
+            key={`${t.src}-${activeFilter}-${i}`}
+            delay={Math.min(i * 50, 500)}
             direction="up"
-            className={sizeFor(i)}
+            className={getBentoClass(i)}
           >
             <button
               onClick={() => setOpenIndex(t.index)}
-              className="relative w-full h-full overflow-hidden group block rounded-2xl"
+              className="relative w-full h-full overflow-hidden group block rounded-xl"
             >
               <Image
                 src={t.src}
                 alt={`${projectName} — ${t.name}`}
                 fill
-                sizes="(min-width: 768px) 30vw, 50vw"
-                className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.08]"
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.07]"
               />
 
-              {/* Always-visible micro-tag */}
-              <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2.5 py-1 text-[9px] tracking-[0.22em] uppercase text-ink-primary opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-1 group-hover:translate-y-0">
-                {t.category}
+              {/* Resting overlay — subtle tint */}
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+
+              {/* Hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Category chip — top left */}
+              <div className="absolute top-3 left-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-400 -translate-y-1 group-hover:translate-y-0">
+                <span className="bg-gold/90 backdrop-blur-sm text-white text-[8px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-full">
+                  {t.category}
+                </span>
               </div>
 
-              {/* Hover gradient + caption */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="font-serif text-white text-base md:text-lg leading-tight">
+              {/* Expand icon — top right */}
+              <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-1 group-hover:translate-y-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" strokeLinecap="round" />
+                </svg>
+              </div>
+
+              {/* Caption — bottom */}
+              <div className="absolute inset-x-0 bottom-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="font-serif text-white text-sm md:text-base leading-snug line-clamp-2">
                   {t.caption}
-                </div>
-                <div className="mt-2 flex items-center justify-between text-[10px] tracking-[0.22em] uppercase text-white/80">
-                  <span>{t.name}</span>
-                  <span className="flex items-center gap-1.5">
-                    Open
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                      <path d="M14 4h6v6M20 4L10 14M9 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-3" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </div>
+                </p>
+                <p className="mt-1.5 text-white/60 text-[10px] tracking-[0.18em] uppercase">{t.name}</p>
               </div>
 
-              {/* Subtle resting frame */}
-              <div className="absolute inset-0 ring-0 group-hover:ring-1 group-hover:ring-gold/60 ring-inset transition-all duration-500" />
+              {/* Gold ring on hover */}
+              <div className="absolute inset-0 rounded-xl ring-0 group-hover:ring-1 group-hover:ring-gold/50 ring-inset transition-all duration-500" />
             </button>
           </Reveal>
         ))}
       </div>
 
-      {/* Footer hint */}
+      {/* ── FOOTER ── */}
       <Reveal>
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-black/10">
-          <div className="text-xs tracking-[0.22em] uppercase text-ink-muted">
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-gold/10">
+          <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-ink-muted">
+            <span className="inline-block w-4 h-px bg-gold/40" />
             {filtered.length} of {tagged.length} frames · {projectName}
           </div>
-          <div className="text-[10px] tracking-[0.22em] uppercase text-ink-muted">
-            Tap any image · Use ← → to navigate · Esc to close
+          <div className="text-[10px] tracking-[0.2em] uppercase text-ink-muted">
+            Tap to expand · ← → navigate · Esc to close
           </div>
         </div>
       </Reveal>
 
       {openIndex !== null && (
         <Lightbox
-          images={tagged.map((t) => ({
-            src: t.src,
-            label: `${t.category} · ${t.name}`,
-          }))}
+          images={tagged.map((t) => ({ src: t.src, label: `${t.category} · ${t.name}` }))}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
           onIndexChange={setOpenIndex}
