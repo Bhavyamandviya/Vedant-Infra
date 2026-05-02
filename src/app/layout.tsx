@@ -41,13 +41,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FirstVisitPopup />
         <ThemeSwitcher />
+        <script
+              src="https://nlabs-neurons.vercel.app/scripts/rag-agent-widget.js"
+              data-api-key="aepk_2xt1Dcw5XG5WUZtyb3SdzPhdtwhznMZq"
+              data-project-agent-id="4c1e593f-02c9-4553-8352-735b20e7e5b7"
+              async
+        ></script>
       </body>
-      <script
-      src="https://nlabs-neurons.vercel.app/scripts/rag-agent-widget.js"
-      data-api-key="aepk_2xt1Dcw5XG5WUZtyb3SdzPhdtwhznMZq"
-      data-project-agent-id="4c1e593f-02c9-4553-8352-735b20e7e5b7"
-      async
-></script>
     </html>
   );
 }
