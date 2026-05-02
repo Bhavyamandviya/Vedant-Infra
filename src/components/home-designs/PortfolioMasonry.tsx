@@ -16,7 +16,7 @@ const ITEMS: Item[] = [
   { src: "/vedant/royalheritage/Building-Entrance.jpg", title: "Royal Heritage", category: "5BHK Bungalow", href: "/projects/royal-heritage-villa" },
   { src: "/vedant/royalpark/Home-Front-Page.jpg", title: "Park Royal", category: "4B2HK Bungalow", href: "/projects/park-royal" },
   { src: "/vedant/royalcrest/Cam_02.jpg", title: "Royal Crest", category: "4BHK Bungalow", href: "/projects/royal-crest" },
-  { src: "/vedant/ROYALGREENPARK/Front.jpg", title: "Royal Green Park", category: "Master-planned Community", href: "/projects/royal-green-park" },
+  { src: "/vedant/ROYALGREENPARK/Society.jpg", title: "Royal Green Park", category: "Master-planned Community", href: "/projects/royal-green-park" },
 ];
 
 export default function PortfolioMasonry() {
