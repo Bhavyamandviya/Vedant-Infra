@@ -79,7 +79,7 @@ export default function AboutPage() {
       <section className="bg-bg-elev">
         <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-7">
-            <div className="eyebrow mb-5">A Note from the Director</div>
+            <div className="eyebrow mb-5">A Note from the Founder</div>
             <h2 className="text-4xl md:text-5xl leading-[1.08] mb-8 max-w-xl">
               Real estate, approached as architecture.
             </h2>
@@ -100,13 +100,13 @@ export default function AboutPage() {
               Thank you for considering us.
             </p>
             <div className="mt-10">
-              <div className="text-xl text-ink-primary">— Mr. Director</div>
-              <div className="text-sm text-ink-muted mt-1">Managing Director, Vedant Infra</div>
+              <div className="text-xl text-ink-primary">— Darpan Patel</div>
+              <div className="text-sm text-ink-muted mt-1">Founder &amp; Owner, Vedant Infra</div>
             </div>
           </div>
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg-elev">
-              <Image src="/uploads/royal_heritage_villa/branding.png" alt="Director" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image src="/uploads/royal_heritage_villa/branding.png" alt="Darpan Patel" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>
@@ -155,56 +155,90 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* RUCHIR SHETH */}
+      {/* DARPAN PATEL — EXPANDED */}
       <section className="bg-bg">
-        <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
-          <div className="lg:col-span-5 lg:order-1 order-2">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg-elev">
-              <Image src="/logos_src/ruchi.png" alt="Ruchir Sheth" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-10" />
+        <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg-elev group">
+              <Image
+                src="/Awards/Award.JPG"
+                alt="Darpan Patel — Founder &amp; Owner, Vedant Infra"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-7">
+                <div className="eyebrow !text-white/80 mb-2">The Founder &amp; Owner</div>
+                <div className="font-serif text-3xl text-white leading-tight">Darpan Patel</div>
+                <div className="text-white/70 text-sm mt-1.5">Founder &amp; Owner, Vedant Infra</div>
+              </div>
             </div>
           </div>
-          <div className="lg:col-span-7 lg:order-2 order-1">
-            <div className="eyebrow mb-5">Architect In Residence</div>
-            <h2 className="text-4xl md:text-5xl leading-[1.08] mb-8 max-w-xl">Ruchir Sheth</h2>
-            <p className="text-ink-secondary leading-relaxed mb-5 max-w-xl">
-              Each Vedant Infra residence is designed in close collaboration
-              with Ruchir Sheth, whose studio has shaped some of Gujarat's most
-              distinguished private commissions.
-            </p>
-            <p className="text-ink-secondary leading-relaxed max-w-xl mb-5">
-              His sensibility — a quiet modernism grounded in proportion and
-              material — is the architectural voice of our portfolio.
-            </p>
-            <p className="text-ink-secondary leading-relaxed max-w-xl">
-              The partnership, now into its second decade, has yielded all five
-              of our signature communities and continues to define what a
-              Vedant Infra home feels like.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* ZARNA */}
-      <section className="bg-bg-elev">
-        <div className="container py-28 md:py-36 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-7">
-            <div className="eyebrow mb-5">Structural Consultants</div>
-            <h2 className="text-4xl md:text-5xl leading-[1.08] mb-8 max-w-xl">ZARNA Associates</h2>
+            <div className="eyebrow mb-5">About the Founder</div>
+            <h2 className="text-4xl md:text-5xl leading-[1.08] mb-8 max-w-xl">Shri Darpan B. Patel</h2>
             <p className="text-ink-secondary leading-relaxed mb-5 max-w-xl">
-              Our structural partner for every project, ZARNA Associates brings
-              decades of engineering discipline to the homes we build. Their
-              approach — earthquake-resistant pile frame construction, rigorous
-              on-site supervision and meticulous material specifications —
-              underwrites the longevity of every Vedant Infra residence.
+              Vedant Infra is a leading player in Vadodara&apos;s real estate industry, founded by
+              Shri Darpan B. Patel. Over the years Vedant Infra has firmly established itself
+              amongst Vadodara&apos;s most successful developers by imprinting a mark across all
+              asset classes.
+            </p>
+            <p className="text-ink-secondary leading-relaxed mb-5 max-w-xl">
+              Our integrated approach to serving clients spans planning, construction,
+              architectural and design services — extending to infrastructure development
+              around our properties. We also provide specialised services including home
+              automation and facility management.
+            </p>
+            <p className="text-ink-secondary leading-relaxed mb-5 max-w-xl">
+              Everyone dreams of owning their own home — and Darpan has helped many families
+              make those dreams a reality. Each home is built painstakingly, with a focus on
+              quality, thoughtful detailing and enduring value for money. The trust and
+              confidence of the people who choose Vedant Infra is both the measure of success
+              and the driving force behind every new product and community.
             </p>
             <p className="text-ink-secondary leading-relaxed max-w-xl">
-              What we promise a resident on paper, ZARNA ensures we deliver on
-              site.
+              Born and raised in Vadodara, Darpan founded Vedant Infra with a small team and
+              an unfashionable idea — that genuine craft, restraint and patience would matter
+              more than scale. Today the studio has delivered over 150 residences across five
+              signature communities, with an architectural language widely recognised as the
+              standard for considered luxury in Western India.
             </p>
-          </div>
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-bg">
-              <Image src="/logos_src/zarana.png" alt="ZARNA Associates" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-10" />
+
+            {/* TOI Award highlight */}
+            <div className="mt-12 p-7 border border-gold/25 bg-bg-elev rounded-2xl">
+              <div className="eyebrow mb-4 text-gold">Recognised by The Times of India</div>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <div className="text-[11px] tracking-[0.18em] uppercase text-gold mb-1">2024</div>
+                  <div className="font-serif text-lg text-ink-primary leading-snug mb-1">Real Estate Icon — Vadodara</div>
+                  <p className="text-ink-secondary text-sm leading-relaxed">
+                    Recognised by The Times Group for sustained excellence in residential development.
+                  </p>
+                </div>
+                <div>
+                  <div className="text-[11px] tracking-[0.18em] uppercase text-gold mb-1">2023</div>
+                  <div className="font-serif text-lg text-ink-primary leading-snug mb-1">Builder of the Year — Western India</div>
+                  <p className="text-ink-secondary text-sm leading-relaxed">
+                    Awarded for pioneering bungalow communities across Vadodara.
+                  </p>
+                </div>
+                <div>
+                  <div className="text-[11px] tracking-[0.18em] uppercase text-gold mb-1">2024</div>
+                  <div className="font-serif text-lg text-ink-primary leading-snug mb-1">Editor&apos;s Choice Honour</div>
+                  <p className="text-ink-secondary text-sm leading-relaxed">
+                    Featured by The Times Group for craft, integrity and architectural restraint.
+                  </p>
+                </div>
+                <div>
+                  <div className="text-[11px] tracking-[0.18em] uppercase text-gold mb-1">2022</div>
+                  <div className="font-serif text-lg text-ink-primary leading-snug mb-1">Iconic Brands of India</div>
+                  <p className="text-ink-secondary text-sm leading-relaxed">
+                    Vedant Infra named among the iconic homegrown brands of India.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

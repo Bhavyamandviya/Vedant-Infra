@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
 import OwnerSection from "@/components/OwnerSection";
+import OngoingProjectsSlider from "@/components/OngoingProjectsSlider";
 import CurtainHero from "@/components/home-designs/CurtainHero";
 import { listProjects } from "@/lib/projects";
 import { COMPANY } from "@/lib/company";
@@ -195,6 +196,9 @@ export default async function HomeDesignThree() {
           );
         })}
       </section>
+
+      {/* ========= ONGOING PROJECTS ========= */}
+      <OngoingProjectsSlider />
 
       {/* ========= OWNER + AWARDS — split-style on cream ========= */}
       <OwnerSection variant="light" showFullBio={false} />

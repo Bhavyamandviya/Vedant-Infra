@@ -8,6 +8,7 @@ import Counter from "@/components/motion/Counter";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import MosaicHero from "@/components/home-designs/MosaicHero";
 import OwnerSection from "@/components/OwnerSection";
+import OngoingProjectsSlider from "@/components/OngoingProjectsSlider";
 import { listProjects } from "@/lib/projects";
 import { COMPANY, TESTIMONIALS } from "@/lib/company";
 
@@ -260,6 +261,9 @@ export default async function HomeDesignTwo() {
           </Reveal>
         </div>
       </section>
+
+      {/* ========= ONGOING PROJECTS ========= */}
+      <OngoingProjectsSlider />
 
       {/* ========= OWNER + AWARDS — dark variant ========= */}
       <OwnerSection variant="dark" />

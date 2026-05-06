@@ -127,7 +127,7 @@ export default function OwnerSection({ variant = "light", showFullBio = true }: 
                     Darpan Patel
                   </div>
                   <div className="text-white/70 text-sm mt-1.5">
-                    Managing Director, Vedant Infra
+                    Founder &amp; Owner, Vedant Infra
                   </div>
                 </div>
               </div>
