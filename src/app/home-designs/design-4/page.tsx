@@ -10,6 +10,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 import ReelHero from "@/components/home-designs/ReelHero";
 import PortfolioMasonry from "@/components/home-designs/PortfolioMasonry";
 import OwnerSection from "@/components/OwnerSection";
+import OngoingProjectsSlider from "@/components/OngoingProjectsSlider";
 import { COMPANY, KEY_FEATURES, TESTIMONIALS } from "@/lib/company";
 
 export const dynamic = "force-static";
@@ -96,7 +97,7 @@ export default function HomeDesignFour() {
             </Reveal>
             <Reveal delay={180}>
               <div className="mt-8 text-ink-secondary text-sm">
-                — Darpan Patel, Founder
+                — Darpan Patel, Founder &amp; Owner
               </div>
             </Reveal>
           </div>
@@ -214,6 +215,9 @@ export default function HomeDesignFour() {
           ))}
         />
       </section>
+
+      {/* ========= ONGOING PROJECTS ========= */}
+      <OngoingProjectsSlider />
 
       {/* ========= OWNER + AWARDS — light, hero scale ========= */}
       <OwnerSection variant="light" />

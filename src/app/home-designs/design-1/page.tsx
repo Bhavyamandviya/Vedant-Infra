@@ -10,6 +10,7 @@ import Counter from "@/components/motion/Counter";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import HeroSlideshow from "@/components/home-designs/HeroSlideshow";
 import OwnerSection from "@/components/OwnerSection";
+import OngoingProjectsSlider from "@/components/OngoingProjectsSlider";
 import { listProjects } from "@/lib/projects";
 import { COMPANY, KEY_FEATURES, TESTIMONIALS } from "@/lib/company";
 
@@ -242,6 +243,9 @@ export default async function HomeDesignOne() {
           </div>
         </section>
       )}
+
+      {/* ========= ONGOING PROJECTS ========= */}
+      <OngoingProjectsSlider />
 
       {/* ========= OWNER + AWARDS ========= */}
       <OwnerSection variant="light" />
