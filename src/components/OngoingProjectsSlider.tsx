@@ -29,30 +29,30 @@ const ONGOING_PROJECTS = [
       { label: "Gazebo Open Terrace", value: "01" },
     ],
   },
-  {
-    name: "Park Royal",
-    slug: "park-royal",
-    image: "/vedant/royalpark/Society.jpg",
-    specs: [
-      { label: "Kitchen", value: "01" },
-      { label: "Bedrooms", value: "04" },
-      { label: "Balcony", value: "01" },
-      { label: "Bathrooms", value: "03" },
-      { label: "Gazebo Open Terrace", value: "01" },
-    ],
-  },
-  {
-    name: "Royal Crest",
-    slug: "royal-crest",
-    image: "/vedant/royalcrest/Society.jpg",
-    specs: [
-      { label: "Kitchen", value: "01" },
-      { label: "Bedrooms", value: "04" },
-      { label: "Balcony", value: "01" },
-      { label: "Bathrooms", value: "03" },
-      { label: "Gazebo Open Terrace", value: "01" },
-    ],
-  },
+  // {
+  //   name: "Park Royal",
+  //   slug: "park-royal",
+  //   image: "/vedant/royalpark/Society.jpg",
+  //   specs: [
+  //     { label: "Kitchen", value: "01" },
+  //     { label: "Bedrooms", value: "04" },
+  //     { label: "Balcony", value: "01" },
+  //     { label: "Bathrooms", value: "03" },
+  //     { label: "Gazebo Open Terrace", value: "01" },
+  //   ],
+  // },
+  // {
+  //   name: "Royal Crest",
+  //   slug: "royal-crest",
+  //   image: "/vedant/royalcrest/Society.jpg",
+  //   specs: [
+  //     { label: "Kitchen", value: "01" },
+  //     { label: "Bedrooms", value: "04" },
+  //     { label: "Balcony", value: "01" },
+  //     { label: "Bathrooms", value: "03" },
+  //     { label: "Gazebo Open Terrace", value: "01" },
+  //   ],
+  // },
 ];
 
 export default function OngoingProjectsSlider() {
